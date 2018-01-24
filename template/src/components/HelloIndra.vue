@@ -44,7 +44,7 @@ export default {
   name: 'HelloIndra',
   data () {
     return {
-      msg: '¡Bienvenido/a al generador de proyectos de Vue.js para Indra / Minsait!'
+      msg: '¡Estás en el generador de proyectos de Vue.js para Indra / Minsait!'
     }
   }
 }
