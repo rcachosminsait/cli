@@ -68,7 +68,8 @@ exports.cssLoaders = function (options) {
             path.resolve(__dirname,'../src/assets/scss/main.scss'),
           ]
         }
-      },
+      }
+    ),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }
