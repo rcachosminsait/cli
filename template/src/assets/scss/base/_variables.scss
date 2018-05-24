@@ -1,0 +1,63 @@
+@function rem($pixels, $context: 16) {
+	@return #{$pixels/$context}rem;
+}
+
+
+$--font-size-base: 12px !default;
+
+/* Theme colors */
+$--color-primary: #00c7f5 !default;
+$--color-green-dark: #06dac2 !default;
+$--color-green-light: #01ff8a !default;
+$--color-purple-dark: #b13ae8 !default;
+$--color-purple-light: #ff2cbe !default;
+$--color-red: #e04d4d !default;
+$--color-yellow: #ffab20 !default;
+
+$--color-grey: #888a91 !default;
+$--color-grey-lightest: #edeef0 !default;
+$--color-grey-light: #e0e0e6 !default;
+$--color--grey-medium: #f9f9fb !default;
+$--color-grey-medium-2: #c5c7ce !default;
+$--color-grey-dark: #333 !default;
+
+// Fonts variables
+$font_path: '../assets/fonts/';
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
+
+$ff--m-m: 16 !default;
+$ff--r-s: 12 !default;
+$ff--m-s: 12 !default;
+$ff--m-xs: 10 !default;
+$ff--b-l: 24 !default;
+
+.font--m-m{
+  font-size: rem($ff--m-m);
+  font-weight: $font-weight-medium;
+  color: $--color-grey-dark;
+}
+
+.font--r-s{
+  font-size: rem($ff--r-s);
+  font-weight: $font-weight-regular;
+  color: $--color-grey-dark;
+}
+
+.font--m-s{
+  font-size: rem($ff--m-s);
+  font-weight: $font-weight-medium;
+  color: $--color-grey-dark;
+}
+
+.font--m-xs{
+  font-size: rem($ff--m-xs);
+  font-weight: $font-weight-medium;
+  color: $--color-grey-dark;
+}
+
+.font--b-l{
+  font-size: rem($ff--b-l);
+  font-weight: $font-weight-bold;
+}
