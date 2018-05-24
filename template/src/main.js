@@ -3,7 +3,7 @@ import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
-import store from './store.js'
+import store from './store/store.js'
 
 import 'reset-css/reset.css'
 import '@/assets/scss/main.scss'
