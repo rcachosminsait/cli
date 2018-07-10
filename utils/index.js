@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const spawn = require('child_process').spawn
 
-const lintStyles = ['standard']
+const lintStyles = ['standard', 'airbnb']
 
 /**
  * Sorts dependencies in package.json alphabetically.
@@ -43,7 +43,7 @@ exports.installDependencies = function installDependencies(
  * @param {object} data Data from questionnaire
  */
 exports.runLintFix = function runLintFix(cwd, data, color) {
-  // if (data.lint && lintStyles.indexOf(data.lintConfig) !== -1) {
+  if (lintStyles.indexOf('standard') !== -1) {
     console.log(
       `\n\n${color(
         'Running eslint --fix to comply with chosen preset rules...'
@@ -57,7 +57,7 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
     return runCommand(data.autoInstall, args, {
       cwd,
     })
-  // }
+  }
   return Promise.resolve()
 }
 
