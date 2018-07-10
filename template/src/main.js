@@ -4,9 +4,21 @@ import App from './App'
 import router from './router'
 {{/router}}
 import store from './store/store.js'
+{{#if_eq onesait "yes"}}
+import ODS from '@onesait/onesait-ds'
+{{/if_eq}}
+import VueI18n from 'vue-i18n'
 
 import 'reset-css/reset.css'
 import '@/assets/scss/main.scss'
+{{#if_eq onesait "yes"}}
+import '@onesait/onesait-ds/lib/theme-chalk/index.css'
+{{/if_eq}}
+
+{{#if_eq onesait "yes"}}
+Vue.use(ODS)
+{{/if_eq}}
+Vue.use(VueI18n)
 
 Vue.config.productionTip = false
 

@@ -52,6 +52,22 @@ module.exports = {
       message: 'Autor',
       default: 'minsait',
     },
+    onesait: {
+      when: 'isNotTest',
+      type: 'list',
+      message: '¿Instalar el Sistema de Diseño de Onesait?',
+      choices: [
+        {
+          name: 'Sí (Tengo configurado npm con el usuario y clave del Sistema de Diseño)',
+          value: 'yes',
+          short: 'yes',
+        },
+        {
+          name: 'No, lo instalaré yo mismo más adelante.',
+          value: 'noOds',
+          short: 'noOds',
+        }
+    },
     build: {
       when: 'isNotTest',
       type: 'list',
@@ -74,33 +90,6 @@ module.exports = {
       when: 'isNotTest',
       type: 'confirm',
       message: '¿Instalar vue-router? (Obvio)',
-    },
-    lint: {
-      when: 'isNotTest',
-      type: 'confirm',
-      message: '¿Usar ESLint para verificar el código? (Luego no te quejes)',
-    },
-    lintConfig: {
-      when: 'isNotTest && lint',
-      type: 'list',
-      message: 'Elige una configuración para el ESLint',
-      choices: [
-        {
-          name: 'Standard (https://github.com/standard/standard)',
-          value: 'standard',
-          short: 'Standard',
-        },
-        {
-          name: 'Airbnb (https://github.com/airbnb/javascript)',
-          value: 'airbnb',
-          short: 'Airbnb',
-        },
-        {
-          name: 'ninguno (configurarlo a medida)',
-          value: 'none',
-          short: 'none',
-        },
-      ],
     },
     unit: {
       when: 'isNotTest',
@@ -159,8 +148,8 @@ module.exports = {
     },
   },
   filters: {
-    '.eslintrc.js': 'lint',
-    '.eslintignore': 'lint',
+    '.eslintrc.js': true,
+    '.eslintignore': true,
     'config/test.env.js': 'unit || e2e',
     'build/webpack.test.conf.js': "unit && runner === 'karma'",
     'test/unit/**/*': 'unit',
