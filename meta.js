@@ -67,6 +67,7 @@ module.exports = {
           value: 'noOds',
           short: 'noOds',
         }
+      ],
     },
     build: {
       when: 'isNotTest',
