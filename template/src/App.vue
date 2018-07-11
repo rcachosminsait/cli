@@ -29,17 +29,23 @@
 </template>
 
 <script>
-{{#router}}
-import SideNavigation from './components/SideNavigation'
-{{/router}}
+{{#unless router}}
 import HelloIndra from './views/HelloIndra'
-
+{{/unless}}
+{{#if_eq onesait "yes"}}
+import SideNavigation from './components/SideNavigation'
+{{/if_eq}}
 export default {
-  name: 'App',
+  name: 'App'{{#router}}
+  {{#if_eq onesait "yes"}},
   components: {
-    HelloIndra{{#router}},
-    SideNavigation{{/router}}
-  }
+    SideNavigation
+  }{{/if_eq}}
+  {{else}},
+  components: {
+    HelloIndra{{#if_eq onesait "yes"}},
+    SideNavigation{{/if_eq}}
+  }{{/router}}
 }
 </script>
 
