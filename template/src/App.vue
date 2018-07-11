@@ -11,7 +11,7 @@
           {{#router}}
           <router-view/>
           {{else}}
-          <HelloWorld/>
+          <HelloIndra/>
           {{/router}}
         </ods-main>
       </ods-container>
@@ -22,24 +22,24 @@
     {{#router}}
     <router-view/>
     {{else}}
-    <HelloWorld/>
+    <HelloIndra/>
     {{/router}}
     {{/if_eq}}
   </div>
 </template>
 
 <script>
-{{#unless router}}
-import HelloWorld from './views/HelloWorld'
+{{#router}}
 import SideNavigation from './components/SideNavigation'
+{{/router}}
+import HelloIndra from './views/HelloIndra'
 
-{{/unless}}
 export default {
-  name: 'App'{{#router}}{{else}},
+  name: 'App',
   components: {
-    HelloIndra,
-    SideNavigation
-  }{{/router}}
+    HelloIndra{{#router}},
+    SideNavigation{{/router}}
+  }
 }
 </script>
 
