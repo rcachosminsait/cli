@@ -6,7 +6,9 @@
         <side-navigation></side-navigation>
       </ods-aside>
       <ods-container>
-        <ods-header>Cabecera</ods-header>
+        <ods-header>
+          <the-header></the-header>
+        </ods-header>
         <ods-main>
           {{#router}}
           <router-view/>
@@ -30,10 +32,11 @@
 
 <script>
 {{#unless router}}
-import HelloIndra from './views/HelloIndra'
+import HelloIndra from '@/views/HelloIndra'
 {{/unless}}
 {{#if_eq onesait "yes"}}
-import SideNavigation from './components/SideNavigation'
+import SideNavigation from '@/components/SideNavigation'
+import TheHeader from '@/components/TheHeader'
 {{/if_eq}}
 export default {
   name: 'App'{{#router}}
@@ -44,17 +47,16 @@ export default {
   {{else}},
   components: {
     HelloIndra{{#if_eq onesait "yes"}},
-    SideNavigation{{/if_eq}}
+    SideNavigation,
+    TheHeader{{/if_eq}}
   }{{/router}}
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Soho', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body {
+  font-family: 'Soho', Helvetica, Arial, sans-serif!important;
+  -webkit-font-smoothing: subpixel-antialiased;
   font-kerning: none;
-  text-align: left;
 }
 </style>

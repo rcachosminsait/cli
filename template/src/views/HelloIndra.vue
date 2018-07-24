@@ -117,9 +117,6 @@ export default {
         }
       }
     }
-  }
-
- 
+  } 
 }
-
 </style>

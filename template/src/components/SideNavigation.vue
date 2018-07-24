@@ -1,10 +1,11 @@
 <template>
-    <ods-menu default-active="2"
-        class="ods-menu-vertical-demo"
+    <ods-menu
+        class="onesait-navigation"
         @open="handleOpen"
         @close="handleClose"
         :collapse="isCollapse"
         menuTrigger="click"
+        :collapse-transition="true"
         position="fixed"
         :isFirstLevel="true">
         <ods-menu-item index="0">

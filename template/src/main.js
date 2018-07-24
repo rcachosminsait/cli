@@ -12,7 +12,7 @@ import VueI18n from 'vue-i18n'
 import 'reset-css/reset.css'
 import '@/assets/scss/main.scss'
 {{#if_eq onesait "yes"}}
-import '@onesait/onesait-ds/lib/theme-chalk/index.css'
+import '@onesait/onesait-ds/lib/theme-onesait/index.css'
 {{/if_eq}}
 
 {{#if_eq onesait "yes"}}
