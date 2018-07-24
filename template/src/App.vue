@@ -42,7 +42,8 @@ export default {
   name: 'App'{{#router}}
   {{#if_eq onesait "yes"}},
   components: {
-    SideNavigation
+    SideNavigation,
+    TheHeader
   }{{/if_eq}}
   {{else}},
   components: {
