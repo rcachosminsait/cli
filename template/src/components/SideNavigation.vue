@@ -1,17 +1,15 @@
 <template>
     <ods-menu
-        class="onesait-navigation"
+        class="ods-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
         :collapse="isCollapse"
         menuTrigger="click"
-        :collapse-transition="true"
         position="fixed"
         :isFirstLevel="true">
-        <ods-menu-item index="0">
-            <ods-icon name="logo"></ods-icon>
-            <span slot="title">Home</span>
-        </ods-menu-item>
+        <li class="ods-menu--logo" @click="isCollapse = !isCollapse">
+            <ods-icon class="ods-menu--logo__icon" name="logo"></ods-icon>
+        </li>
 
         <ods-submenu index="1">
             <template slot="title">
@@ -29,7 +27,7 @@
                 <ods-menu-item index="2-2-2"><span>Option 2</span></ods-menu-item>
                 <ods-menu-item index="2-2-3"><span>Option 3</span></ods-menu-item>
             </ods-submenu>
-            <ods-menu-item index="1-2"><span>Submenu Item 3</span></ods-menu-item>
+            <ods-menu-item index="1-3"><span>Submenu Item 3</span></ods-menu-item>
             <ods-menu-item index="1-4"><span>Submenu Item 4</span></ods-menu-item>
         </ods-submenu>
 
@@ -52,12 +50,12 @@
             </ods-submenu>
         </ods-submenu>
 
-        <ods-menu-item index="3" disabled>
+        <ods-menu-item index="3">
             <i class="ods-icon-user"></i>
             <span slot="title">Navigator Three</span>
         </ods-menu-item>
         <ods-menu-item index="4">
-            <i class="ods-icon-user-role"></i>
+            <i class="ods-icon-user"></i>
             <span slot="title">Navigator Four</span>
         </ods-menu-item>
     </ods-menu>

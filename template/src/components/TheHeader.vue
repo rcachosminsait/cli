@@ -4,7 +4,6 @@
       <ods-breadcrumb separator=">">
         <ods-breadcrumb-item :to="{ path: '/' }">Breadcrumb 1</ods-breadcrumb-item>
         <ods-breadcrumb-item><a href="/">Breadcrumb 2</a></ods-breadcrumb-item>
-        <ods-breadcrumb-item>Breadcrumb 3</ods-breadcrumb-item>
         <ods-breadcrumb-item>promotion detail</ods-breadcrumb-item>
       </ods-breadcrumb>
     </div>
