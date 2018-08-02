@@ -59,5 +59,6 @@ html, body {
   font-family: 'Soho', Helvetica, Arial, sans-serif!important;
   -webkit-font-smoothing: subpixel-antialiased;
   font-kerning: none;
+  background: #f5f7fa;
 }
 </style>
