@@ -39,11 +39,6 @@ export default {
             text: this.$t('login.logging')
           })
 
-          const data = {
-            password: this.loginForm.user,
-            username: this.loginForm.password
-          }
-
           if (this.loginForm.user === 'admin' && this.loginForm.password === 'admin') {
             this.$notify.closeAll()
             sessionStorage.sessionToken = 'UserAdmitted'
