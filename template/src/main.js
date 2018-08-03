@@ -9,7 +9,7 @@ import store from './store/store.js'
 {{#if_eq onesait "yes"}}
 import ODS from '@onesait/onesait-ds'
 {{/if_eq}}
-import VueI18n from 'vue-i18n'
+import i18n from './i18n.js'
 
 import 'reset-css/reset.css'
 import '@/assets/scss/main.scss'
@@ -20,7 +20,6 @@ import '@onesait/onesait-ds/lib/theme-onesait/index.css'
 {{#if_eq onesait "yes"}}
 Vue.use(ODS)
 {{/if_eq}}
-Vue.use(VueI18n)
 
 Vue.config.productionTip = false
 
@@ -30,6 +29,7 @@ new Vue({
   router,
   {{/router}}
   store,
+  i18n,
   {{#if_eq build "runtime"}}
   render: h => h(App)
   {{/if_eq}}

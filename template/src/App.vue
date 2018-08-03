@@ -1,23 +1,28 @@
 <template>
   <div id="app">
     {{#if_eq onesait "yes"}}
-    <ods-container>
-      <ods-aside width="72px">
-        <side-navigation></side-navigation>
-      </ods-aside>
+    <template v-if="this.$route.name !== 'login-form'">
       <ods-container>
-        <ods-header>
-          <the-header></the-header>
-        </ods-header>
-        <ods-main>
-          {{#router}}
-          <router-view/>
-          {{else}}
-          <HelloIndra/>
-          {{/router}}
-        </ods-main>
+        <ods-aside width="72px">
+          <side-navigation></side-navigation>
+        </ods-aside>
+        <ods-container>
+          <ods-header>
+            <the-header></the-header>
+          </ods-header>
+          <ods-main>
+            {{#router}}
+            <router-view></router-view>
+            {{else}}
+            <HelloIndra></HelloIndra>
+            {{/router}}
+          </ods-main>
+        </ods-container>
       </ods-container>
-    </ods-container>
+    </template>
+    <template v-else>
+      <router-view></router-view>
+    </template>
     {{/if_eq}}
     {{#if_eq onesait "noOds"}}
     <img src="./assets/images/logo.png">
