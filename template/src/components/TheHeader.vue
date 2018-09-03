@@ -118,7 +118,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and ($--breakpoint-menu) {
   .structure-header {
     flex-wrap: wrap;
 
