@@ -1,58 +1,37 @@
-$--font-size-base: 12px !default;
+$--color-white: #FFF !default;
+$--color-black: #060E14 !default;
 
-/* Theme colors */
-$--color-primary: #00c7f5 !default;
-$--color-green-dark: #06dac2 !default;
-$--color-green-light: #01ff8a !default;
-$--color-purple-dark: #b13ae8 !default;
-$--color-purple-light: #ff2cbe !default;
-$--color-red: #e04d4d !default;
-$--color-yellow: #ffab20 !default;
+$--color-neutral-1: #6E767D !default;
+$--color-neutral-2: #A2ACB3 !default;
+$--color-neutral-3: #D5DCE0 !default;
+$--color-neutral-4: #F9F9FB !default;
 
-$--color-grey: #888a91 !default;
-$--color-grey-lightest: #edeef0 !default;
-$--color-grey-light: #e0e0e6 !default;
-$--color--grey-medium: #f9f9fb !default;
-$--color-grey-medium-2: #c5c7ce !default;
-$--color-grey-dark: #333 !default;
+$--color-primary: #2E6C99 !default;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; // #437ba3
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; // #5889ad
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; // #6d98b8
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default; // #82a7c2
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; // #97b6cc
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default; // #abc4d6
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; // #c0d3e0
+$--color-primary-light-8: mix($--color-white, $--color-primary, 87%) !default; // #E3EBF1
+$--color-primary-light-9: mix($--color-white, $--color-primary, 93%) !default; // #F0F4F7
 
-// Fonts variables
-$font_path: '../assets/fonts/';
-$font-weight-regular: 400 !default;
-$font-weight-medium: 500 !default;
-$font-weight-bold: 700 !default;
+$--color-secondary: #87BEE6 !default;
 
-$ff--m-m: 16 !default;
-$ff--r-s: 12 !default;
-$ff--m-s: 12 !default;
-$ff--m-xs: 10 !default;
-$ff--b-l: 24 !default;
+$--color-label: #6E767D !default;
 
-.font--m-m{
-  font-size: rem($ff--m-m);
-  font-weight: $font-weight-medium;
-  color: $--color-grey-dark;
-}
+$--color-success: #36B348 !default;
+$--color-warning: #FFAB20 !default;
+$--color-danger: #DE2F2F !default;
+$--color-info: $--color-neutral-1 !default;
 
-.font--r-s{
-  font-size: rem($ff--r-s);
-  font-weight: $font-weight-regular;
-  color: $--color-grey-dark;
-}
+$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
+$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
+$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
+$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
 
-.font--m-s{
-  font-size: rem($ff--m-s);
-  font-weight: $font-weight-medium;
-  color: $--color-grey-dark;
-}
-
-.font--m-xs{
-  font-size: rem($ff--m-xs);
-  font-weight: $font-weight-medium;
-  color: $--color-grey-dark;
-}
-
-.font--b-l{
-  font-size: rem($ff--b-l);
-  font-weight: $font-weight-bold;
-}
+$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
+$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
+$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
+$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
