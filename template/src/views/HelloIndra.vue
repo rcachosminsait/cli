@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="hello__intro">
-      <h1 class="hello__title">Un lenguaje de diseño compartido para un desarrollo de producto más ágil y de mejor calidad</h1>
+      <h1 class="hello__title">{{ msg }}</h1>
       <p class="hello__version">Estás usando la versión 1.0. de Onesait-Cli.</p>
     </div>
     <div class="whatsnew">
@@ -22,7 +22,7 @@ export default {
   name: 'HelloIndra',
   data () {
     return {
-      msg: '¡Estás en el generador de proyectos de Vue.js para Indra / Minsait!'
+      msg: 'Un lenguaje de diseño compartido para un desarrollo de producto más ágil y de mejor calidad'
     }
   }
 }
@@ -59,8 +59,8 @@ export default {
 
     li {
       padding: 1rem 1rem 1rem;
-      font-size: 14px;
-      line-height: 18px;
+      font-size: rem(14);
+      line-height: rem(18);
       color: #525050;
     }
   }

@@ -1,8 +1,8 @@
 <template lang="pug">
   ods-form(:model='loginForm', :rules='rules' ref='loginForm')
-    ods-form-item(label='Usuario' prop='user')
+    ods-form-item(label="$t('login.user')" prop='user')
       ods-input(type='text' v-model='loginForm.user')
-    ods-form-item(label='Contraseña' prop='password')
+    ods-form-item(label="$t('login.password')" prop='password')
       ods-input(type='password' v-model='loginForm.password')
     ods-form-item
       ods-button(type='primary' native-type="submit" @click="submitForm('loginForm')") Enviar
@@ -73,6 +73,6 @@ export default {
   }
 
   /deep/ .ods-form-item__label {
-    line-height: 12px;
+    line-height: rem(12);
   }
 </style>
