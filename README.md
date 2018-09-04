@@ -1,6 +1,6 @@
 # minsait vue-webpack-boilerplate
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction for minsait projects.
+> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction for onesait projects.
 
 ## Documentation
 
@@ -13,19 +13,13 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init indivisual/minsait my-project
+$ vue init onesaitux/cli my-project
 $ cd my-project
 $ npm install
 $ npm run dev
 ```
 
-This will scaffold the project using the `master` branch. If you wish to use the latest version of the webpack template, do the following instead:
-
-``` bash
-$ vue init indivisual/minsait#develop my-project
-```
-
-:warning: **The develop branch is not considered stable and can contain bugs or not build at all, so use at your own risk.**
+This will scaffold the project using the `master` branch. 
 
 The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
 
