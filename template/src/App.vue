@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     {{#if_eq onesait "yes"}}
-    <template v-if="this.$route.name !== 'login-form'">
+    <template v-if="!this.$route.path.includes('login')">
       <ods-container>
         <ods-aside width="72px">
           <side-navigation></side-navigation>
