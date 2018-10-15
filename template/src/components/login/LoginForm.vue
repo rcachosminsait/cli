@@ -4,7 +4,7 @@
     :rules="rules"
     ref="loginForm")
     div
-      h1.login-form__title {{ title }}
+      h1.login-form__title \{{ $t('login.title') }}
       .login-form__errors.ods-mb-5
         ods-alert(
           v-show="errors"
@@ -22,7 +22,7 @@
           type="password"
           v-model="loginForm.password")
       router-link(to="/login/password" tag="div")
-        ods-button.ods-p-0(type="text") {{ $t('login.forgotPassword') }}
+        ods-button.ods-p-0(type="text") {{{ $t('login.forgotPassword') }}}
     div.login-form__actions
       ods-checkbox(v-model="keepMeLogged") {{ $t('login.keepMeLogged') }}
       ods-button(type="primary" native-type="submit" @click.prevent="submitForm('loginForm')") {{ $t('login.login') }}
@@ -36,7 +36,6 @@ export default {
   mixins: [ FormStyles ],
   data () {
     return {
-      title: this.$t('login.title'),
       loginForm: {
         user: 'admin',
         password: 'admin'
