@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloIndra from '@/views/HelloIndra'
-import Login from '@/views/Login'
-import LoginForm from '@/views/LoginForm'
+import Login from '@/views/login/Login'
+import LoginForm from '@/components/login/LoginForm'
+import LoginPasswordForm from '@/components/login/LoginPasswordForm'
 
 Vue.use(Router)
 
 const route = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/login',
@@ -18,6 +20,11 @@ const route = new Router({
           path: '',
           name: 'login-form',
           component: LoginForm
+        },
+        {
+          path: 'password',
+          name: 'password-form',
+          component: LoginPasswordForm
         }
       ]
     },

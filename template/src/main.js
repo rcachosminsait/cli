@@ -1,5 +1,3 @@
-require('babel-polyfill')
-
 import Vue from 'vue'
 import App from './App'
 {{#router}}
@@ -9,7 +7,7 @@ import store from './store/store.js'
 {{#if_eq onesait "yes"}}
 import ODS from '@onesait/onesait-ds'
 {{/if_eq}}
-import i18n from './i18n.js'
+import i18n from './lang/i18n.js'
 
 import 'reset-css/reset.css'
 import '@/assets/scss/main.scss'
@@ -20,6 +18,8 @@ import '@onesait/onesait-ds/lib/theme-onesait/index.css'
 {{#if_eq onesait "yes"}}
 Vue.use(ODS)
 {{/if_eq}}
+
+require('babel-polyfill')
 
 Vue.config.productionTip = false
 

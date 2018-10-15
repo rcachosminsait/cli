@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     {{#if_eq onesait "yes"}}
-    <template v-if="this.$route.name !== 'login-form'">
+    <template v-if="!this.$route.path.includes('login')">
       <ods-container>
         <ods-aside width="72px">
           <side-navigation></side-navigation>
@@ -44,13 +44,14 @@ import SideNavigation from '@/components/SideNavigation'
 import TheHeader from '@/components/TheHeader'
 {{/if_eq}}
 export default {
-  name: 'App'{{#router}}
-  {{#if_eq onesait "yes"}},
+  name: 'App'{{#router}},
+  {{#if_eq onesait "yes"}}
   components: {
     SideNavigation,
     TheHeader
-  }{{/if_eq}}
-  {{else}},
+  }
+{{/if_eq}}
+{{else}}
   components: {
     HelloIndra{{#if_eq onesait "yes"}},
     SideNavigation,
