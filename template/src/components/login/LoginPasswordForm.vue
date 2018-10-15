@@ -37,7 +37,7 @@
         template(v-else-if="emailSent===-2")
           img(src="../../assets/images/login/email-error.svg")
           p \{{ $t('serverError') }}
-        p(v-if="userEmail") {{ userEmail }}
+        p(v-if="userEmail") \{{ userEmail }}
       router-link(to="/login" tag="div")
         ods-button(type='primary') \{{ $t('password.done') }}
 </template>

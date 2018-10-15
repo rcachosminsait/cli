@@ -6,10 +6,11 @@
       :key="link"
       :to="`/${link}`"
       tag="li")
-        a {{ link }}
+        a \{{ link }}
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'LoginFooter'
 }

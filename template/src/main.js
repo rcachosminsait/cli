@@ -1,5 +1,3 @@
-require('babel-polyfill')
-
 import Vue from 'vue'
 import App from './App'
 {{#router}}
@@ -20,6 +18,8 @@ import '@onesait/onesait-ds/lib/theme-onesait/index.css'
 {{#if_eq onesait "yes"}}
 Vue.use(ODS)
 {{/if_eq}}
+
+require('babel-polyfill')
 
 Vue.config.productionTip = false
 
