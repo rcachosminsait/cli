@@ -9,7 +9,7 @@ import store from './store/store.js'
 {{#if_eq onesait "yes"}}
 import ODS from '@onesait/onesait-ds'
 {{/if_eq}}
-import i18n from './lang/i18n'
+import i18n from './lang/i18n.js'
 
 import 'reset-css/reset.css'
 import '@/assets/scss/main.scss'
