@@ -22,10 +22,10 @@
           type="password"
           v-model="loginForm.password")
       router-link(to="/login/password" tag="div")
-        ods-button.ods-p-0(type="text") {{{ $t('login.forgotPassword') }}}
+        ods-button.ods-p-0(type="text") \{{ $t('login.forgotPassword') }}
     div.login-form__actions
-      ods-checkbox(v-model="keepMeLogged") {{ $t('login.keepMeLogged') }}
-      ods-button(type="primary" native-type="submit" @click.prevent="submitForm('loginForm')") {{ $t('login.login') }}
+      ods-checkbox(v-model="keepMeLogged") \{{ $t('login.keepMeLogged') }}
+      ods-button(type="primary" native-type="submit" @click.prevent="submitForm('loginForm')") \{{ $t('login.login') }}
 </template>
 
 <script>
