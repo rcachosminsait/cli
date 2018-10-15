@@ -4,7 +4,7 @@
     :rules="rules"
     ref="loginForm")
     div
-      h1.login-form__title {{ $t('login.title') }}
+      h1.login-form__title {{ title }}
       .login-form__errors.ods-mb-5
         ods-alert(
           v-show="errors"
@@ -36,6 +36,7 @@ export default {
   mixins: [ FormStyles ],
   data () {
     return {
+      title: this.$t('login.title'),
       loginForm: {
         user: 'admin',
         password: 'admin'
