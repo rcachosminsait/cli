@@ -186,7 +186,7 @@ export default {
     }
     .bars {
       &::after {
-        height: 145px;
+        height: 105px;
       }
     }
   }
