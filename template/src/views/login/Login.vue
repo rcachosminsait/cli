@@ -110,6 +110,7 @@ export default {
   .bars {
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
     &::after {
       content: '';
       height: 65vh;
