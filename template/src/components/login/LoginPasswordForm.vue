@@ -76,12 +76,16 @@ export default {
           this.loader({loader: true, password: true})
           const response = await this.login({email: this.passwordForm.email})
           const isError = response instanceof Error
+          /********************************************
+          // Elimina este setTimeout! Es sólo para demo
+          ********************************************/
+          setTimeout(() => {
           if (!isError) {
             this.errors = false
             this.$notify.closeAll()
             this.emailSent = 1
             this.loader({loader: false, password: true})
-            this.userEmail = response.data.data.found.email
+            this.userEmail = response.data.email
           } else {
             this.errors = true
             this.$notify.closeAll()
@@ -96,6 +100,8 @@ export default {
             this.loader({loader: false, password: true})
             this.userEmail = this.passwordForm.email
           }
+          }, 2500)
+          /*   /setTimeout */
         } else {
           console.log('error submit!!')
           this.errors = true

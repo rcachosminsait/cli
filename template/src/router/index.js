@@ -30,7 +30,7 @@ const route = new Router({
     },
     {
       path: '/',
-      name: 'HelloIndra',
+      name: 'Home',
       component: HelloIndra,
       meta: {
         private: true

@@ -69,25 +69,31 @@ export default {
           }
           const response = await this.login(data)
           const isError = response instanceof Error
-          if (!isError) {
-            this.$notify.closeAll()
-            sessionStorage.sessionToken = response.data.data.token
-            sessionStorage.userId = response.data.data.user.id
-            this.loader({loader: false})
-            this.$router.push({ name: 'Home' })
-          } else {
-            this.errorInfo = `${this.$t('login.loginError')} ${response.response.status} ${response.response.statusText}`
-            this.$notify.closeAll()
-            this.$notify({
-              title: _this.$t('login.loginErrorTitle'),
-              message: this.errorInfo,
-              type: 'error',
-              position: 'top-right',
-              duration: 5000
-            })
-            this.loader({loader: false})
-            this.errors = true
-          }
+          /********************************************
+          // Elimina este setTimeout! Es sólo para demo
+          ********************************************/
+          setTimeout(() => {
+            if (!isError) {
+              this.$notify.closeAll()
+              sessionStorage.sessionToken = response.data.token
+              sessionStorage.userId = response.data.userId
+              this.loader({loader: false})
+              this.$router.push({ name: 'Home' })
+            } else {
+              this.errorInfo = `${this.$t('login.loginError')}`
+              this.$notify.closeAll()
+              this.$notify({
+                title: _this.$t('login.loginErrorTitle'),
+                message: this.errorInfo,
+                type: 'error',
+                position: 'top-right',
+                duration: 5000
+              })
+              this.loader({loader: false})
+              this.errors = true
+            }
+          }, 2500)
+          /*   /setTimeout */
         } else {
           console.log('error submit!!')
           this.errors = true
