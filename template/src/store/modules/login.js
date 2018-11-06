@@ -1,6 +1,6 @@
 import axios from 'axios'
 const axiosConfig = {
-  baseURL: '/api/login'
+  baseURL: '/static/fake-login.json'
 }
 const HTTP = axios.create(axiosConfig)
 
@@ -27,13 +27,22 @@ const getters = {
 // actions
 const actions = {
   async login ({ commit }, data) {
-    let endPoint = data.email ? '/email' : '/account'
+    /********************************************
+    // Bloque a modificar con la API del proyecto
+    ********************************************/
+    let endPoint = data.email ? 'password' : 'login'
     try {
-      const response = await HTTP.post(endPoint, data)
-      if (!data.email) {
-        axios.defaults.headers.common['Authorization'] = `Bearer ${sessionStorage.getItem('sessionToken')}`
+      const response = await HTTP.get() // esto será un post
+      if (endPoint === 'login' && response.data[endPoint].user === data.username &&
+        response.data[endPoint].password === data.password) {
+        response.data = response.data[endPoint]
+        return response
+      } else if (endPoint === 'password' && response.data[endPoint].email === data.email) {
+        response.data = response.data[endPoint]
+        return response
+      } else {
+        throw new Error('Incorrect username or password')
       }
-      return response
     } catch (error) {
       console.log(error)
       return error

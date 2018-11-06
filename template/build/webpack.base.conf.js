@@ -31,17 +31,6 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
-  devServer: {
-    before(app){
-     apiMocker(app, path.resolve('./mocker/index.js'), {
-       proxy: {
-         '/repos/*': 'https://api.github.com/',
-         '/:owner/:repo/raw/:ref/*': 'http://127.0.0.1:2018'
-       },
-       changeHost: true,
-     })
-    }
-  },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
