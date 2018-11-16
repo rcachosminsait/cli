@@ -16,8 +16,7 @@
       router-view(
         v-loading="loading && !mobile"
         v-loading.fullscreen.lock="loading && mobile"
-        :element-loading-text="password ? $t('password.sending') : $t('login.logging')"
-        element-loading-spinner="pulse")
+        :loading-text="password ? $t('password.sending') : $t('login.logging')")
     login-footer
 </template>
 

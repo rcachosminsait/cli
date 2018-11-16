@@ -8,7 +8,6 @@ import LoginPasswordForm from '@/components/login/LoginPasswordForm'
 Vue.use(Router)
 
 const route = new Router({
-  mode: 'history',
   routes: [
     {
       path: '/login',
