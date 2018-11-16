@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+import info from '../package.json'
 {{#router}}
 import router from './router'
 {{/router}}
@@ -38,3 +39,11 @@ new Vue({
   template: '<App/>'
   {{/if_eq}}
 })
+
+if(process.env.NODE_ENV === 'development') {
+  window.odsInfo = {
+    "ods-version": info.dependencies['@onesait/onesait-ds'],
+    "project": info.name,
+    "author": info.author
+  }
+}
