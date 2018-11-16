@@ -42,7 +42,7 @@ new Vue({
 
 if(process.env.NODE_ENV === 'development') {
   window.odsInfo = {
-    "ods-version": info.dependencies['@onesait/onesait-ds'],
+    'ods-version': ODS.version,
     "project": info.name,
     "author": info.author
   }
