@@ -20,7 +20,6 @@ import '@onesait/onesait-ds/lib/theme-onesait/index.css'
 Vue.use(ODS)
 {{/if_eq}}
 
-require('babel-polyfill')
 
 Vue.config.productionTip = false
 
@@ -43,7 +42,7 @@ new Vue({
 if(process.env.NODE_ENV === 'development') {
   window.odsInfo = {
     'ods-version': ODS.version,
-    "project": info.name,
-    "author": info.author
+    'project': info.name,
+    'author': info.author
   }
 }
