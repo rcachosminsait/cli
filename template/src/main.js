@@ -9,20 +9,15 @@ import store from './store/store.js'
 import ODS from '@onesait/onesait-ds'
 {{/if_eq}}
 import i18n from './lang/i18n.js'
-
 import 'reset-css/reset.css'
 import '@/assets/scss/main.scss'
 {{#if_eq onesait "yes"}}
 import '@onesait/onesait-ds/lib/theme-onesait/index.css'
 {{/if_eq}}
-
 {{#if_eq onesait "yes"}}
 Vue.use(ODS)
 {{/if_eq}}
-
-
 Vue.config.productionTip = false
-
 new Vue({
   el: '#app',
   {{#router}}
@@ -38,8 +33,7 @@ new Vue({
   template: '<App/>'
   {{/if_eq}}
 })
-
-if(process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development') {
   window.odsInfo = {
     'ods-version': ODS.version,
     'project': info.name,

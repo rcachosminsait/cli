@@ -23,11 +23,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
     "vue": "^2.5.2"{{#router}},
     "vue-router": "^3.0.1"{{/router}},
     "vuex": "^3.0.1",
     "axios": "^0.17.1",
+    "babel-polyfill": "^6.26.0",
     "element-ui": "^2.0.10",
     "pug-runtime": "^2.0.3",
     "reset-css": "^2.2.1",
