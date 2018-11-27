@@ -11,7 +11,7 @@
             v-for="lang in langs"
             :key="lang.value"
             :value="lang.value"
-            :label="mobile ? lang.labelMobile : lang.label") {{ lang.label }}
+            :label="mobile ? lang.labelMobile : lang.label"){{ lang.label }}
     main.login__main
       router-view(
         v-loading="loading && !mobile"

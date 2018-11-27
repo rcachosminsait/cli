@@ -80,26 +80,26 @@ export default {
           // Elimina este setTimeout! Es sólo para demo
           ********************************************/
           setTimeout(() => {
-          if (!isError) {
-            this.errors = false
-            this.$notify.closeAll()
-            this.emailSent = 1
-            this.loader({loader: false, password: true})
-            this.userEmail = response.data.email
-          } else {
-            this.errors = true
-            this.$notify.closeAll()
-            this.$notify({
-              title: 'Error',
-              message: _this.$t('password.error'),
-              type: 'error',
-              position: 'top-right',
-              duration: 5000
-            })
-            this.emailSent = -1
-            this.loader({loader: false, password: true})
-            this.userEmail = this.passwordForm.email
-          }
+            if (!isError) {
+              this.errors = false
+              this.$notify.closeAll()
+              this.emailSent = 1
+              this.loader({loader: false, password: true})
+              this.userEmail = response.data.email
+            } else {
+              this.errors = true
+              this.$notify.closeAll()
+              this.$notify({
+                title: 'Error',
+                message: _this.$t('password.error'),
+                type: 'error',
+                position: 'top-right',
+                duration: 5000
+              })
+              this.emailSent = -1
+              this.loader({loader: false, password: true})
+              this.userEmail = this.passwordForm.email
+            }
           }, 2500)
           /*   /setTimeout */
         } else {
