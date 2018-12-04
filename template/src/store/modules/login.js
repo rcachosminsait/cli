@@ -1,6 +1,6 @@
 import axios from 'axios'
 const axiosConfig = {
-  baseURL: '/static/fake-login.json'
+  baseURL: './static/fake-login.json'
 }
 const HTTP = axios.create(axiosConfig)
 
