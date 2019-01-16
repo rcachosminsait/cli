@@ -4,16 +4,20 @@
     ref="navigation")
     template(slot="suites")
       suites-menu
+    template(slot="isPhone-user-menu")
+      user-menu.is-phone__user-menu
 </template>
 
 <script>
 import navigationConfig from '@/components/nav/config.json'
 import SuitesMenu from '@/components/header/SuitesMenu'
+import UserMenu from '@/components/header/UserMenu'
 
 export default {
   name: 'NavContent',
   components: {
-    SuitesMenu
+    SuitesMenu,
+    UserMenu
   },
   data () {
     return {
