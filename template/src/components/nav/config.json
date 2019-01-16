@@ -19,11 +19,10 @@
 	},
 	"tasks": {
 		"langs": {
-			"es": "Icono como imagen",
-			"en": "Image as icon"
+			"es": "Tareas",
+			"en": "Tasks"
 		},
-		"image": "image_icon_demo.png",
-		"imageHover": "image_icon_demo_hover.png",
+		"icon": "broadcast",
 		"cssClass": "my-custom-class",
 		"children": {
 			"all": {

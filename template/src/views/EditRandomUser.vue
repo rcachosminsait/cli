@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  h1 Editing random user: {{ $route.params.id }}
+  h1 Editing random user: \{{ $route.params.id }}
 </template>
 
 <script>
