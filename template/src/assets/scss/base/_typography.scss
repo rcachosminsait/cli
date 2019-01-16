@@ -1,176 +1,130 @@
-// .tp-title
-.tp-title-exa{
-  font-size: rem(60); 
-  font-weight: 500;
-  line-height: rem(96);
+
+@import 'typography-placeholder';
+
+// Medium
+.tp-m-exa{
+  @extend %tp-m-exa;
 }
 
-.tp-title-tera{
-  font-size: rem(42);
-  font-weight: 500;
-  line-height: rem(72);
+.tp-m-tera{
+  @extend %tp-m-tera;
 }
 
-.tp-title-mega{
-  font-size: rem(30);
-  font-weight: 500;
-  line-height: rem(48);
+.tp-m-giga{
+  @extend %tp-m-giga;
 }
 
-.tp-title-kilo{
-  font-size: rem(22);
-  font-weight: 500; 
-  line-height: rem(40);
+.tp-m-mega{
+  @extend %tp-m-mega;
 }
 
-.tp-title-hecto{
-  font-size: rem(18);
-  font-weight: 500;
-  line-height: rem(32);
+.tp-m-kilo{
+  @extend %tp-m-kilo;
 }
 
-.tp-title-deca{
-  font-size: rem(16);
-  font-weight: 500;
-  line-height: rem(32);
+.tp-m-hecto{
+  @extend %tp-m-hecto;
 }
 
-.tp-title-deci{
-  font-size: rem(14);
-  font-weight: 500; 
-  line-height: rem(24);
+.tp-m-deca{
+  @extend %tp-m-deca;
 }
 
-.tp-title-centi{
-  font-size: rem(12);
-  font-weight: 500;
-  line-height: rem(24);
+.tp-m-deci{
+  @extend %tp-m-deci;
 }
 
-// .tp-subtitle
-.tp-subtitle-mega{
-  font-size: rem(30);
-  font-weight: 400;
-  line-height: rem(48);
+.tp-m-centi{
+  @extend %tp-m-centi;
 }
 
-.tp-subtitle-kilo{
-  font-size: rem(22);
-  font-weight: 400;
-  line-height: rem(40);
+.tp-m-mili{
+  @extend %tp-m-mili;
 }
 
-.tp-subtitle-hecto{
-  font-size: rem(18);
-  font-weight: 400;
-  line-height: rem(32);
+.tp-m-micro{
+  @extend %tp-m-micro;
 }
 
-.tp-subtitle-deci{
-  font-size: rem(14);
-  font-weight: 400;
-  line-height: rem(24);
+.tp-m-nano{
+  @extend %tp-m-nano;
 }
 
-.tp-subtitle-mili{
-  font-size: rem(11);
-  font-weight: 400;
-  line-height: rem(16);
+
+// Regular
+.tp-r-exa{
+  @extend %tp-r-exa;
 }
 
-// .tp-body
-.tp-body-deci{
-  font-size: rem(14);
-  font-weight: 400;
-  line-height: rem(24);
+.tp-r-tera{
+  @extend %tp-r-tera;
 }
 
-.tp-body-centi{
-  font-size: rem(12);
-  font-weight: 400;
-  line-height: rem(24);
+.tp-r-giga{
+  @extend %tp-r-giga;
 }
 
-.tp-body-mili{
-  font-size: rem(11);
-  font-weight: 400;
-  line-height: rem(16);
+.tp-r-mega{
+  @extend %tp-r-mega;
 }
 
-// .tp-value
-.tp-value-exa{
-  font-size: rem(60);
-  font-weight: 500;
-  line-height: rem(96);
+.tp-r-kilo{
+  @extend %tp-r-kilo;
 }
 
-.tp-value-tera{
-  font-size: rem(42);
-  font-weight: 500;
-  line-height: rem(72);
+.tp-r-hecto{
+  @extend %tp-r-hecto;
 }
 
-.tp-value-giga{
-  font-size: rem(36);
-  font-weight: 500;
-  line-height: rem(56);
+.tp-r-deca{
+  @extend %tp-r-deca;
 }
 
-.tp-value-mega{
-  font-size: rem(30);
-  font-weight: 500;
-  line-height: rem(48);
+.tp-r-deci{
+  @extend %tp-r-deci;
 }
 
-.tp-value-hecto{
-  font-size: rem(18);
-  font-weight: 500;
-  line-height: rem(32);
+.tp-r-centi{
+  @extend %tp-r-centi;
 }
 
-.tp-title-deca{
-  font-size: rem(16);
-  font-weight: 500;
-  line-height: rem(32);
+.tp-r-mili{
+  @extend %tp-r-mili;
 }
 
-.tp-value-deci{
-  font-size: rem(14);
-  font-weight: 500;
-  line-height: rem(24);
+.tp-r-micro{
+  @extend %tp-r-micro;
 }
 
-.tp-value-centi{
-  font-size: rem(12);
-  font-weight: 500;
-  line-height: rem(24);
+.tp-r-nano{
+  @extend %tp-r-nano;
 }
+
+
 
 // Extra
-.tp—tab-micro{
-  font-size: rem(10);
-  font-weight: 500;
-  line-height: rem(20);
-  text-transform: uppercase;
+.tp-tab-micro{
+  @extend %tp—tab-micro;
 }
 
-.tp—button-micro{
-  font-size: rem(10);
-  font-weight: 500;
-  line-height: rem(16);
-  text-transform: uppercase;
+.tp-button-micro{
+  @extend %tp—button-micro;
 }
 
-.tp—label-nano{
-  font-size: rem(9);
-  font-weight: 500; 
-  line-height: rem(16);
-  text-transform: uppercase;
+.tp-label-nano{
+  @extend %tp-label-nano;
 }
 
-.tp—sectionbox-nano{
-  font-size: rem(9);
-  font-weight: 400;
-  line-height: rem(20);
-  text-transform: uppercase;
+.tp-sectionbox-nano{
+  @extend %tp—sectionbox-nano;
+}
+
+.tp-r{
+  font-weight: $font-weight-regular;
+}
+.tp-m{
+  font-weight: $font-weight-medium;
+}
+.tp-b{
+  font-weight: $font-weight-bold;
 }

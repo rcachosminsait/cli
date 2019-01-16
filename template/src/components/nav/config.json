@@ -1,0 +1,138 @@
+{	
+	"home": {
+		"cssClass": "my-custom-class",
+		"langs": {
+			"es": "Inicio",
+			"en": "Home"
+		},
+		"icon": "home",
+		"to": "/"
+	},
+	"dashboard": {
+		"langs": {
+			"es": "Escritorio",
+			"en": "Dashboard"
+		},
+		"icon": "dashboard",
+		"to": "/dashboard",
+		"children": {}
+	},
+	"tasks": {
+		"langs": {
+			"es": "Icono como imagen",
+			"en": "Image as icon"
+		},
+		"image": "image_icon_demo.png",
+		"imageHover": "image_icon_demo_hover.png",
+		"cssClass": "my-custom-class",
+		"children": {
+			"all": {
+				"langs": {
+					"es": "Ver todo",
+					"en": "View all"
+				},
+				"to": "/tasks"
+			}
+		}
+	},
+	"users": {
+		"langs": {
+			"es": "Usuarios",
+			"en": "User"
+		},
+		"icon": "user-role",
+		"children": {
+			"all": {
+				"langs": {
+					"es": "Ver usuarios",
+					"en": "View users"
+				},
+				"to": "/users"
+			},
+			"my-user": {
+				"langs": {
+					"es": "Mi usuario",
+					"en": "My user"
+				},
+				"to": "/users/my-user"
+			},
+			"user-actions": {
+				"langs": {
+					"es": "Acciones de usuario",
+					"en": "User actions"
+				},
+				"children": {
+					"edit": {
+						"langs": {
+							"es": "Editar perfil",
+							"en": "Edit profile"
+						},
+						"to": "/users/my-user/edit"
+					}
+				}
+			}
+		}
+	},
+	"google": {
+		"langs": {
+			"es": "Link externo",
+			"en": "External link"
+		},
+		"icon": "external-link",
+		"to": "https://google.com"
+	},
+	"random7": {
+		"langs": {
+			"es": "Otro menú",
+			"en": "Another menu"
+		},
+		"icon": "cammera",
+		"to": "/random-7",
+		"notificationGroup": "general",
+		"children": {
+			"delete-child-7": {
+				"langs": {
+					"es": "Random ES 1",
+					"en": "Random EN 1"
+				},
+				"to": "/my-user/edit7",
+				"disabled": "true"
+			},
+			"delete-child-8": {
+				"langs": {
+					"es": "Random ES 2",
+					"en": "Random EN 2"
+				},
+				"to": "/my-user/edit8"
+			},
+			"delete-child-9": {
+				"langs": {
+					"es": "Random ES 3",
+					"en": "Random EN 3"
+				},
+				"to": "/my-user/edit9"
+			},
+			"delete-child-4": {
+				"langs": {
+					"es": "Random ES 4",
+					"en": "Random EN 4"
+				},
+				"to": "/my-user/edit4"
+			},
+			"delete-child-5": {
+				"langs": {
+					"es": "Random ES 5",
+					"en": "Random EN 5"
+				},
+				"to": "/my-user/edit5"
+			},
+			"delete-child-6": {
+				"langs": {
+					"es": "Random ES 6",
+					"en": "Random EN 6"
+				},
+				"to": "/my-user/edit6"
+			}
+		}
+	}
+}

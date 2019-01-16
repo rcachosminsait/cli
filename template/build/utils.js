@@ -68,6 +68,7 @@ exports.cssLoaders = function (options) {
           resources: [
             path.resolve(__dirname,'../src/assets/scss/base/_variables.scss'),
             path.resolve(__dirname,'../src/assets/scss/base/_mixins.scss'),
+            path.resolve(__dirname,'../src/assets/scss/base/_typography_placeholder.scss')
           ]
         }
       }

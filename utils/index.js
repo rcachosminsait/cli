@@ -67,10 +67,10 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
  */
 exports.printMessage = function printMessage(data, { green, yellow }) {
   const message = `
-# ${green('¡Inicialización del proyecto terminada! ¡Mucha mierda!')}
+# ${green('¡Inicialización del proyecto terminada! Happy coding!!')}
 # ========================
 
-Para empezar a currar:
+Para empezar a desarrollar:
 
   ${yellow(
     `${data.inPlace ? '' : `cd ${data.destDirName}\n  `}${installMsg(

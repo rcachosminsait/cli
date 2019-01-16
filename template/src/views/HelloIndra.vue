@@ -1,68 +1,182 @@
-<template>
-  <div class="hello">
-    <div class="hello__intro">
-      <h1 class="hello__title">{{ msg }}</h1>
-      <p class="hello__version">Estás usando la versión 1.0. de Onesait-Cli.</p>
-    </div>
-    <div class="whatsnew">
-      <h2 class="whatnew__title">Novedades de la versión:</h2>
-      <ul>
-        <li>Inluye componente de menú lateral y header</li>
-        <li>Incorporación del Sistema de Componentes onesait-ds</li>
-        <li>Agregado el módulo de multidioma</li>
-        <li>Incluido un eslint personalizado</li>
-        <li>Módulo de login</li>
-      </ul>
-    </div>
-  </div>
+<template lang="pug">
+div
+  ods-row.flex-container.wrap(:gutter="20")
+    ods-col.ods-mb-4(
+      :xs="24"
+      :md="8")
+      ods-module
+        div.flex-container.space-between.align-center(slot="header")
+          span Module Title
+          ods-button(type="text")
+            | Link Button
+            ods-icon(name="arrow-right" size="16")
+        p Content of module
+    ods-col.ods-mb-4(
+      :xs="24"
+      :md="8")
+      ods-module
+        div.flex-container.space-between.align-center(slot="header")
+          span Module Title
+          ods-button(type="text")
+            | Link Button
+            ods-icon(name="arrow-right" size="16")
+        p Content of module
+    ods-col.ods-mb-4(
+      :xs="24"
+      :md="8")
+      ods-module
+        div.flex-container.space-between.align-center(slot="header")
+          span Module Title
+          ods-button(type="text")
+            | Link Button
+            ods-icon(name="arrow-right" size="16")
+        p Content of module
+  ods-row.flex-container.wrap.ods-mt-6(:gutter="20")
+    ods-col.ods-mb-4(
+      :xs="24"
+      :md="12")
+      ods-module
+        ods-table(
+          :data="tableData3"
+          height="250"
+          style="width: 100%")
+          ods-table-column(
+            prop="date"
+            label="Fecha"
+            width="180")
+          ods-table-column(
+            prop="name"
+            label="Nombre"
+            width="180")
+          ods-table-column(
+            prop="address"
+            label="Dirección")
+    ods-col.ods-mb-4(
+      :xs="24"
+      :md="12")
+      ods-module
+        ods-table(
+          :data="tableData3"
+          height="250"
+          style="width: 100%")
+          ods-table-column(
+            prop="date"
+            label="Fecha"
+            width="180")
+          ods-table-column(
+            prop="name"
+            label="Nombre"
+            width="180")
+          ods-table-column(
+            prop="address"
+            label="Dirección")
+  ods-row.flex-container.wrap.ods-mt-6(:gutter="20")
+    ods-col.ods-mb-4(
+      :xs="24"
+      :md="8")
+      ods-module
+        div.flex-container.space-between.align-center(slot="header")
+          span Module Title
+          ods-button(type="text")
+            | Link Button
+            ods-icon(name="arrow-right" size="16")
+        p Content of module
+    ods-col.ods-mb-4(
+      :xs="24"
+      :md="8")
+      ods-module
+        div.flex-container.space-between.align-center(slot="header")
+          span Module Title
+          ods-button(type="text")
+            | Link Button
+            ods-icon(name="arrow-right" size="16")
+        p Content of module
+    ods-col.ods-mb-4(
+      :xs="24"
+      :md="8")
+      ods-module
+        div.flex-container.space-between.align-center(slot="header")
+          span Module Title
+          ods-button(type="text")
+            | Link Button
+            ods-icon(name="arrow-right" size="16")
+        p Content of module
+  ods-row.flex-container.wrap.ods-mt-6(:gutter="20")
+    ods-col.ods-mb-4(
+      :xs="24"
+      :md="12")
+      ods-module
+        ods-table(
+          :data="tableData3"
+          height="250"
+          style="width: 100%")
+          ods-table-column(
+            prop="date"
+            label="Fecha"
+            width="180")
+          ods-table-column(
+            prop="name"
+            label="Nombre"
+            width="180")
+          ods-table-column(
+            prop="address"
+            label="Dirección")
+    ods-col.ods-mb-4(
+      :xs="24"
+      :md="12")
+      ods-module
+        ods-table(
+          :data="tableData3"
+          height="250"
+          style="width: 100%")
+          ods-table-column(
+            prop="date"
+            label="Fecha"
+            width="180")
+          ods-table-column(
+            prop="name"
+            label="Nombre"
+            width="180")
+          ods-table-column(
+            prop="address"
+            label="Dirección")
 </template>
 
 <script>
 export default {
-  name: 'HelloIndra',
+  name: 'Home',
   data () {
     return {
-      msg: 'Un lenguaje de diseño compartido para un desarrollo de producto más ágil y de mejor calidad'
+      tableData3: [{
+        date: '2016-05-03',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles'
+      }, {
+        date: '2016-05-02',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles'
+      }, {
+        date: '2016-05-04',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles'
+      }, {
+        date: '2016-05-01',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles'
+      }, {
+        date: '2016-05-08',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles'
+      }, {
+        date: '2016-05-06',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles'
+      }, {
+        date: '2016-05-07',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles'
+      }]
     }
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-.hello {
-  max-width:70rem;
-  margin:auto;
-
-  &__intro {
-    margin: rem(50) 0 rem(150) 0px;
-    max-width: rem(600);
-    color: #000;
-    line-height: 1.3
-  }
-
-  &__title {
-    font-size: rem(36);
-    font-weight: 500;
-    margin: rem(20) 0;
-  }
-
-  &__version {
-    font-size: rem(10);
-  }
-
-  ul {
-    padding: 0;
-    text-align:left;
-    width:100%;
-    margin: 2rem auto;
-
-    li {
-      padding: 1rem 1rem 1rem;
-      font-size: rem(14);
-      line-height: rem(18);
-      color: #525050;
-    }
-  }
-}
-</style>
