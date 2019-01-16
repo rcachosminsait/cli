@@ -8,13 +8,11 @@
 
 <script>
 import navigationConfig from '@/components/nav/config.json'
-import OdsMainNavigation from '@/components/main-navigation/MainNavigation'
 import SuitesMenu from '@/components/header/SuitesMenu'
 
 export default {
   name: 'NavContent',
   components: {
-    OdsMainNavigation,
     SuitesMenu
   },
   data () {

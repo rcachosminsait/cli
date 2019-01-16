@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import OdsMainHeader from '@/components/main-header/MainHeader'
 import notificationsDemo from '../../../static/notificationsDemo.json'
 import HeaderActions from '@/components/header/HeaderActions'
 import UserMenu from '@/components/header/UserMenu'
@@ -32,7 +31,6 @@ import * as _ from 'lodash'
 export default {
   name: 'HeaderContent',
   components: {
-    OdsMainHeader,
     HeaderActions,
     UserMenu,
     SuitesMenu
