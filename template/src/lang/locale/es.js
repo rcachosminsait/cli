@@ -2,6 +2,8 @@ import esLocale from '@onesait/onesait-ds/lib/locale/lang/es'
 
 export default {
   ...esLocale,
+  label: 'Español',
+  labelMobile: 'ES',
   serverError: 'Ha ocurrido un error inesperado en el servidor. Inténtalo de nuevo.',
   login: {
     title: 'Iniciar sesión',
@@ -34,5 +36,18 @@ export default {
     emailSubmitted: 'Hemos enviado un correo electrónico con instrucciones para poder restablecer su contraseña a:',
     done: 'Finalizar',
     emailError: 'No existe ninguna cuenta vinculada a este correo electrónico: '
+  },
+  notifications: {
+    popoverTitle: 'Notificaciones'
+  },
+  breadcrumb: {
+    home: 'Inicio',
+    dashboard: 'Escritorio',
+    tasks: 'Tareas',
+    users: 'Usuarios',
+    randomUser: 'Usuario random ',
+    editProfile: 'Editar mi perfil',
+    myUser: 'Mi usuario',
+    editUser: 'Editar usuario'
   }
 }

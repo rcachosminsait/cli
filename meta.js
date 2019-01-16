@@ -69,60 +69,10 @@ module.exports = {
         }
       ],
     },
-    build: {
-      when: 'isNotTest',
-      type: 'list',
-      message: 'Vue build',
-      choices: [
-        {
-          name: 'Runtime + Compiler: recomendado para la mayoría de proyectos de minsait',
-          value: 'standalone',
-          short: 'standalone',
-        },
-        {
-          name:
-            'Runtime-only: 6KB menos de peso min+gzip, pero templates (o cualquier HTML) está solo permitido en archivos Vue -  Las funciones de render serán requeridas en cualquier sitio',
-          value: 'runtime',
-          short: 'runtime',
-        },
-      ],
-    },
-    router: {
-      when: 'isNotTest',
-      type: 'confirm',
-      message: '¿Instalar vue-router? (Obvio)',
-    },
-    unit: {
-      when: 'isNotTest',
-      type: 'confirm',
-      message: '¿Instalar test unitarios? (¿El proyecto tiene presupuesto para esto?)',
-    },
-    runner: {
-      when: 'isNotTest && unit',
-      type: 'list',
-      message: 'Elige un test runner',
-      choices: [
-        {
-          name: 'Jest',
-          value: 'jest',
-          short: 'jest',
-        },
-        {
-          name: 'Karma and Mocha',
-          value: 'karma',
-          short: 'karma',
-        },
-        {
-          name: 'ninguno (configurarlo a medida)',
-          value: 'noTest',
-          short: 'noTest',
-        },
-      ],
-    },
     e2e: {
       when: 'isNotTest',
       type: 'confirm',
-      message: '¿Configurar test e2e con Nightwatch? (Mejor no te metas en este jardín)',
+      message: '¿Configurar test e2e con Nightwatch?',
     },
     autoInstall: {
       when: 'isNotTest',
@@ -141,7 +91,7 @@ module.exports = {
           short: 'npm',
         },
         {
-          name: 'No, gracias. Se escribirlo sin ayuda.',
+          name: 'No, gracias. Lo instalaré después.',
           value: false,
           short: 'no',
         },
@@ -151,16 +101,12 @@ module.exports = {
   filters: {
     '.eslintrc.js': true,
     '.eslintignore': true,
-    'config/test.env.js': 'unit || e2e',
-    'build/webpack.test.conf.js': "unit && runner === 'karma'",
-    'test/unit/**/*': 'unit',
-    'test/unit/index.js': "unit && runner === 'karma'",
-    'test/unit/jest.conf.js': "unit && runner === 'jest'",
-    'test/unit/karma.conf.js': "unit && runner === 'karma'",
-    'test/unit/specs/index.js': "unit && runner === 'karma'",
-    'test/unit/setup.js': "unit && runner === 'jest'",
+    'config/test.env.js': true,
+    'test/unit/**/*': true,
+    'test/unit/jest.conf.js': true,
+    'test/unit/setup.js': true,
     'test/e2e/**/*': 'e2e',
-    'src/router/**/*': 'router',
+    'src/router/**/*': true
   },
   complete: function(data, { chalk }) {
     const green = chalk.green

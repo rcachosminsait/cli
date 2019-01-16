@@ -26,6 +26,21 @@ $--color-warning: #FFAB20 !default;
 $--color-danger: #DE2F2F !default;
 $--color-info: $--color-neutral-1 !default;
 
+$--color-onesait-logo: #193b47;
+
+/* Menu, Header & Main-V2-Jan-19
+--------------------------*/
+$--header-height: 64px;
+$--header-padding: 16px;
+$--header-mobile-padding: 8px;
+$--main-nav-width: 240px;
+$--main-nav-width-collapsed: 64px;
+$--collapse-bottom-margin: 8px;
+$--nav-collapse-bar-height: 52px;
+$--main-content-height: calc(100vh - #{$--header-height});
+$--nav-height: calc(100vh - #{$--header-height} - #{$--nav-collapse-bar-height} - #{$--collapse-bottom-margin});
+$--main-nav-shadow: 0 4px 10px 0 rgba( $--color-black, .1 );
+
 /* Break-point
 --------------------------*/
 $--sm: 768px !default;
@@ -33,3 +48,7 @@ $--md: 992px !default;
 $--lg: 1200px !default;
 $--xl: 1920px !default;
 $--breakpoint-menu: $--md;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;

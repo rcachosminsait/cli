@@ -1,9 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import RouteView from '@/components/shared/RouteView'
 import HelloIndra from '@/views/HelloIndra'
 import Login from '@/views/login/Login'
 import LoginForm from '@/components/login/LoginForm'
 import LoginPasswordForm from '@/components/login/LoginPasswordForm'
+import Dashboard from '@/views/Dashboard'
+import Tasks from '@/views/Tasks'
+import Users from '@/views/Users'
+import MyUser from '@/views/MyUser'
+import EditUser from '@/views/EditUser'
+import RandomUser from '@/views/RandomUser'
+import EditRandomUser from '@/views/EditRandomUser'
 
 Vue.use(Router)
 
@@ -32,8 +40,92 @@ const route = new Router({
       name: 'Home',
       component: HelloIndra,
       meta: {
+        breadcrumbTextKey: 'home',
         private: true
       }
+    },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard,
+      meta: {
+        breadcrumbTextKey: 'dashboard',
+        private: true
+      }
+    },
+    {
+      path: '/tasks',
+      name: 'Tasks',
+      component: Tasks,
+      meta: {
+        breadcrumbTextKey: 'tasks',
+        private: true
+      }
+    },
+    {
+      path: '/users',
+      name: 'UsersView',
+      component: RouteView,
+      redirect: {name: 'Users'},
+      meta: {
+        private: true,
+        breadcrumbTextKey: 'users'
+      },
+      children: [
+        {
+          path: '',
+          name: 'Users',
+          component: Users
+        },
+        {
+          path: 'random-user/:id',
+          component: RouteView,
+          redirect: {name: 'Random user'},
+          meta: {
+            breadcrumbTextKey: 'randomUser',
+            breadcrumbParam: 'id'
+          },
+          children: [
+            {
+              path: '',
+              name: 'Random user',
+              component: RandomUser
+            },
+            {
+              path: 'edit',
+              name: 'Edit user',
+              component: EditRandomUser,
+              meta: {
+                breadcrumbTextKey: 'editProfile'
+                // breadcrumbParam: 'id'
+              }
+            }
+          ]
+        },
+        {
+          path: 'my-user',
+          name: 'My User',
+          component: RouteView,
+          meta: {
+            breadcrumbTextKey: 'myUser'
+          },
+          children: [
+            {
+              path: '',
+              name: 'My User',
+              component: MyUser
+            },
+            {
+              meta: {
+                breadcrumbTextKey: 'editUser'
+              },
+              path: 'edit',
+              name: 'Edit user',
+              component: EditUser
+            }
+          ]
+        }
+      ]
     }
   ]
 })

@@ -1,70 +1,40 @@
-<template>
-  <div id="app">
-    {{#if_eq onesait "yes"}}
-    <template v-if="!this.$route.path.includes('login')">
-      <ods-container>
-        <ods-aside width="72px">
-          <side-navigation></side-navigation>
-        </ods-aside>
-        <ods-container>
-          <ods-header>
-            <the-header></the-header>
-          </ods-header>
-          <ods-main>
-            {{#router}}
-            <router-view></router-view>
-            {{else}}
-            <HelloIndra></HelloIndra>
-            {{/router}}
-          </ods-main>
-        </ods-container>
-      </ods-container>
-    </template>
-    <template v-else>
-      <router-view></router-view>
-    </template>
-    {{/if_eq}}
-    {{#if_eq onesait "noOds"}}
-    <img src="./assets/images/logo.png">
-    {{#router}}
-    <router-view/>
-    {{else}}
-    <HelloIndra/>
-    {{/router}}
-    {{/if_eq}}
-  </div>
+<template lang="pug">
+  #app
+    template(v-if="!this.$route.path.includes('login')")
+      header-content
+      div.flex-container
+        nav-content
+        ods-main
+          ods-scrollbar(wrapClass="ods-scrollbar--main-content")
+            router-view
+            footer
+    template(v-else)
+      router-view
 </template>
 
 <script>
-{{#unless router}}
-import HelloIndra from '@/views/HelloIndra'
-{{/unless}}
-{{#if_eq onesait "yes"}}
-import SideNavigation from '@/components/SideNavigation'
-import TheHeader from '@/components/TheHeader'
-{{/if_eq}}
+import HeaderContent from '@/components/header/HeaderContent'
+import NavContent from '@/components/nav/NavContent'
+
 export default {
-  name: 'App'{{#router}},
-  {{#if_eq onesait "yes"}}
+  name: 'App',
   components: {
-    SideNavigation,
-    TheHeader
+    HeaderContent,
+    NavContent
   }
-{{/if_eq}}
-{{else}}
-  components: {
-    HelloIndra{{#if_eq onesait "yes"}},
-    SideNavigation,
-    TheHeader{{/if_eq}}
-  }{{/router}}
 }
 </script>
 
-<style>
-html, body {
-  font-family: 'Soho', Helvetica, Arial, sans-serif!important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-kerning: none;
-}
+<style lang="scss">
+  html, body {
+    font-family: 'Soho', Helvetica, Arial, sans-serif!important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: none;
+    .ods-scrollbar--main-content {
+      height: $--main-content-height;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+  }
 </style>
