@@ -1,7 +1,7 @@
 <template lang="pug">
   ul.ods-actions-menu__ul.ods-actions-menu--suites__ul
     li.suites__title
-      suite-logo.suites__logo(fill="#ffffff")
+      suite-logo
       small.suites__text suite
     router-link.suites__item(
       tag="li"
