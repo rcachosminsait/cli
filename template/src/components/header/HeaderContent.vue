@@ -5,7 +5,6 @@
     breadcrumbSeparator=">"
     actionsMenuIcon="overflow-menu"
     userMenuText="Pedro Páramo"
-    clientLogo="header/logo-cliente.svg"
     :showSuitesMenu="true"
     :showBreadcrumbs="true"
     environment="dev"
@@ -19,6 +18,11 @@
       user-menu
     template(slot="suites")
       suites-menu
+    template(slot="clientLogo")
+      div.ods-main-header__client-logo
+        img(
+          src="@/assets/images/header/logo-cliente.svg"
+          alt="logo")
 </template>
 
 <script>
