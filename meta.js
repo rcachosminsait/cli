@@ -106,7 +106,7 @@ module.exports = {
     'test/unit/jest.conf.js': true,
     'test/unit/setup.js': true,
     'test/e2e/**/*': 'e2e',
-    'src/router/**/*': true,
+    'src/router/**/*': true
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
