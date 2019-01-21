@@ -6,12 +6,9 @@
         product="product"
         product-module="module")
       div.login__lang-selector
-        ods-select.login__select--white(v-model="$i18n.locale")
-          ods-option(
-            v-for="lang in langs"
-            :key="lang.value"
-            :value="lang.value"
-            :label="mobile ? lang.labelMobile : lang.label"){{ lang.label }}
+        lang-selector(
+          cssClass="login__select--white"
+          :mobile="mobile")
     main.login__main
       router-view(
         v-loading="loading && !mobile"
@@ -23,19 +20,13 @@
 <script>
 import LoginFooter from '@/components/login/LoginFooter'
 import { mapGetters } from 'vuex'
+import LangSelector from '@/components/shared/LangSelector'
+
 export default {
   name: 'Login',
   components: {
-    LoginFooter
-  },
-  data () {
-    return {
-      lang: 'es',
-      langs: [
-        {label: 'Español', labelMobile: 'ES', value: 'es'},
-        {label: 'English', labelMobile: 'EN', value: 'en'}
-      ]
-    }
+    LoginFooter,
+    LangSelector
   },
   methods: {
     ...mapGetters([

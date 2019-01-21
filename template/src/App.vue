@@ -35,6 +35,8 @@ export default {
       height: $--main-content-height;
       padding: 24px;
       box-sizing: border-box;
+      padding: $--main-content-padding;
+      background: $--color-neutral-4;
     }
   }
 </style>
