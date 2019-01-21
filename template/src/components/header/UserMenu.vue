@@ -5,7 +5,9 @@
       | pedropáramo@minsait.com
     li.ods-actions-menu__separator
     li
-      lang-selector(cssClass="user-ul__languages")
+      lang-selector(
+        cssClass="user-ul__languages"
+        :mobile="mobile")
     li.ods-actions-menu__separator
     router-link(
       tag="li"
@@ -68,10 +70,22 @@
 
 <script>
 import LangSelector from '@/components/shared/LangSelector'
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'UserMenu',
   components: {
     LangSelector
+  },
+  methods: {
+    ...mapGetters([
+      'getIsMobile'
+    ])
+  },
+  computed: {
+    mobile () {
+      return this.getIsMobile()
+    }
   }
 }
 </script>
