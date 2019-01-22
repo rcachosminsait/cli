@@ -23,6 +23,8 @@
         img(
           src="@/assets/images/header/logo-cliente.svg"
           alt="logo")
+    template(slot="custom")
+      header-custom-content
 </template>
 
 <script>
@@ -30,6 +32,7 @@ import notificationsDemo from '../../../static/notificationsDemo.json'
 import HeaderActions from '@/components/header/HeaderActions'
 import UserMenu from '@/components/header/UserMenu'
 import SuitesMenu from '@/components/header/SuitesMenu'
+import HeaderCustomContent from '@/components/header/HeaderCustomContent'
 import * as _ from 'lodash'
 
 export default {
@@ -37,7 +40,8 @@ export default {
   components: {
     HeaderActions,
     UserMenu,
-    SuitesMenu
+    SuitesMenu,
+    HeaderCustomContent
   },
   computed: {
     notifications () {
