@@ -12,7 +12,8 @@ import MyUser from '@/views/MyUser'
 import EditUser from '@/views/EditUser'
 import RandomUser from '@/views/RandomUser'
 import EditRandomUser from '@/views/EditRandomUser'
-
+import EditRandomUserConfirmation from '@/views/EditRandomUserConfirmation'
+import { setBreadcrumbParams } from './breadcrumb-params'
 Vue.use(Router)
 
 const route = new Router({
@@ -83,7 +84,7 @@ const route = new Router({
           redirect: {name: 'Random user'},
           meta: {
             breadcrumbTextKey: 'randomUser',
-            breadcrumbParam: 'id'
+            breadcrumbParam: 'date'
           },
           children: [
             {
@@ -93,12 +94,26 @@ const route = new Router({
             },
             {
               path: 'edit',
-              name: 'Edit user',
-              component: EditRandomUser,
+              component: RouteView,
+              redirect: {name: 'Edit user'},
               meta: {
                 breadcrumbTextKey: 'editProfile'
-                // breadcrumbParam: 'id'
-              }
+              },
+              children: [
+                {
+                  path: '',
+                  name: 'Edit user',
+                  component: EditRandomUser
+                },
+                {
+                  meta: {
+                    breadcrumbParam: 'myParam'
+                  },
+                  path: 'confirmation',
+                  name: 'Edit user confirmation',
+                  component: EditRandomUserConfirmation
+                }
+              ]
             }
           ]
         },
@@ -116,9 +131,6 @@ const route = new Router({
               component: MyUser
             },
             {
-              meta: {
-                breadcrumbTextKey: 'editUser'
-              },
               path: 'edit',
               name: 'Edit user',
               component: EditUser
@@ -135,6 +147,7 @@ route.beforeEach((to, from, next) => {
     if (!sessionStorage.getItem('sessionToken')) {
       next({name: 'Login'})
     } else {
+      setBreadcrumbParams(to)
       next()
     }
   } else {
