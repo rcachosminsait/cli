@@ -7,9 +7,7 @@
     userMenuText="Pedro Páramo"
     :showSuitesMenu="true"
     :showBreadcrumbs="true"
-    environment="dev"
-    :showNotifications="true"
-    :notifications="notifications"
+    :environment="env"
     :showActionsMenu="true"
     :showUserMenu="true")
     template(slot="actions")
@@ -27,15 +25,16 @@
           alt="logo")
     template(slot="custom")
       header-custom-content
+    template(slot="notifications")
+      header-notifications
 </template>
 
 <script>
-import notificationsDemo from '../../../static/notificationsDemo.json'
 import HeaderActions from '@/components/header/HeaderActions'
 import UserMenu from '@/components/header/UserMenu'
 import SuitesMenu from '@/components/header/SuitesMenu'
 import HeaderCustomContent from '@/components/header/HeaderCustomContent'
-import * as _ from 'lodash'
+import HeaderNotifications from '@/components/header/HeaderNotifications'
 
 export default {
   name: 'HeaderContent',
@@ -43,11 +42,12 @@ export default {
     HeaderActions,
     UserMenu,
     SuitesMenu,
-    HeaderCustomContent
+    HeaderCustomContent,
+    HeaderNotifications
   },
   computed: {
-    notifications () {
-      return _.orderBy(notificationsDemo, ['status', 'date'], ['asc', 'desc'])
+    env () {
+      return process.env.ENV_TAG
     }
   }
 }
