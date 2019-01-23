@@ -32,7 +32,6 @@
 <script>
 import * as _ from 'lodash'
 import notificationsDemo from '../../../static/notificationsDemo.json'
-// import cssVars from '../../theme-onesait/src/common/var.scss'
 import cssVars from '@/assets/scss/main.scss'
 
 export default {

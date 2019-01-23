@@ -4,7 +4,6 @@
     logoUrl="/"
     breadcrumbSeparator=">"
     actionsMenuIcon="overflow-menu"
-    userMenuText="Pedro Páramo"
     :showSuitesMenu="true"
     :showBreadcrumbs="true"
     :environment="env"
