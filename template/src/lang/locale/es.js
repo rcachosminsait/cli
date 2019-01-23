@@ -46,6 +46,7 @@ export default {
     tasks: 'Tareas',
     users: 'Usuarios',
     randomUser: 'Usuario random ',
+    randomString: 'Random string param: ',
     editProfile: 'Editar mi perfil',
     myUser: 'Mi usuario',
     editUser: 'Editar usuario'
