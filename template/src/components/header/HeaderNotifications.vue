@@ -1,6 +1,6 @@
 <template lang="pug">
   div.header-notifications__wrapper
-    span.unread-notifications__badge {{ unreadNotifications }}
+    span.unread-notifications__badge \{{ unreadNotifications }}
     ods-actions-menu.header-notifications(
       icon="notification"
       customClass="header-notifications__popover"
@@ -13,20 +13,20 @@
       ul.ods-actions-menu__ul.ods-actions-menu__ul--notifications
         li.ods-actions-menu__notifications__item.ods-actions-menu__notifications__item--title
           .notification__inner
-            h6.notification__title {{ $t('notifications.popoverTitle') }}
-              span.notifications-counter {{ unreadNotifications }}
+            h6.notification__title \{{ $t('notifications.popoverTitle') }}
+              span.notifications-counter \{{ unreadNotifications }}
         li.ods-actions-menu__notifications__item(
           v-for="(notification, index) in notifications"
           :key="notification.title + index"
           :class="{'ods-actions-menu__notifications__item--unread': !notification.status}")
           .notification__inner
-            h6.notification__title {{ notification.title }}
-            p.notification__content {{ notification.content | truncate(150, '...') }}
+            h6.notification__title \{{ notification.title }}
+            p.notification__content \{{ notification.content | truncate(150, '...') }}
             time.notification__date(
-              :datetime="notification.date") {{ notification.date }}
+              :datetime="notification.date") \{{ notification.date }}
             component.notification__link(
               :is="linkTag(notification)"
-              v-bind="properties") {{ notification.linkText }}
+              v-bind="properties") \{{ notification.linkText }}
 </template>
 
 <script>
