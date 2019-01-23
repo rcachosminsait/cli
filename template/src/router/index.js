@@ -84,7 +84,7 @@ const route = new Router({
           redirect: {name: 'Random user'},
           meta: {
             breadcrumbTextKey: 'randomUser',
-            breadcrumbParam: 'date'
+            breadcrumbParam: 'userInfo'
           },
           children: [
             {
@@ -107,7 +107,7 @@ const route = new Router({
                 },
                 {
                   meta: {
-                    breadcrumbParam: 'myParam'
+                    breadcrumbParam: 'randomStr'
                   },
                   path: 'confirmation',
                   name: 'Edit user confirmation',

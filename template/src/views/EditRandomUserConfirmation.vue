@@ -5,9 +5,6 @@ div
 
 <script>
 export default {
-  name: 'EditRandomUserConfirmation',
-  mounted () {
-    console.log(this.$route)
-  }
+  name: 'EditRandomUserConfirmation'
 }
 </script>

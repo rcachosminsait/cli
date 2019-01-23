@@ -11,10 +11,14 @@ export default {
   name: 'Users',
   methods: {
     getRandomUser () {
-      this.$router.push(`/users/random-user/${this.generateId(0, 200)}`)
+      let num = this.generateId(0, 200)
+      sessionStorage.setItem('userInfo', `SessionStorage ${num}`)
+      this.$router.push(`/users/random-user/${num}`)
     },
     editRandomUser () {
-      this.$router.push(`/users/random-user/${this.generateId(0, 200)}/edit`)
+      let str = Math.random().toString(36).substring(7)
+      sessionStorage.setItem('randomStr', `random Str ${str}`)
+      this.$router.push(`/users/random-user/${this.generateId(0, 200)}/edit/confirmation`)
     },
     generateId (min, max) {
       min = Math.ceil(min)
