@@ -12,7 +12,7 @@
     template(slot="actions")
       header-actions
     template(slot="userAvatar")
-      img(src="@/assets/images/header/avatar.jpg")
+      img(src="@/assets/images/header/avatar.svg")
     template(slot="user")
       user-menu
     template(slot="suites")
