@@ -20,6 +20,7 @@
     color: $--color-black;
     font-size: rem(32);
     margin-bottom: rem(24);
+    font-family: soho-light;
   }
 
   .ods-form, .ods-input__inner {
