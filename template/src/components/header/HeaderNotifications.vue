@@ -78,16 +78,18 @@ export default {
   .header-notifications__wrapper {
     position: relative;
     .unread-notifications__badge {
-      $--badge-size: 24px;
+      $--badge-size: 16px;
       position: absolute;
-      right: -4px;
-      font-size: rem(9);
-      background: $--color-primary;
+      right: 1px;
+      top: 1px;
       width: $--badge-size;
       height: $--badge-size;
+      background: $--color-primary;
       color: $--color-white;
+      font-size: rem(9);
       line-height: $--badge-size;
       text-align: center;
+      font-weight: 500;
       border-radius: 50%;
     }
   }
