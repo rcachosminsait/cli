@@ -5,7 +5,6 @@
       icon="notification"
       customClass="header-notifications__popover"
       width="360"
-      height="calc(100vh - 130px)"
       :onShowEvent="true"
       :onHideEvent="true"
       @show="showMobileOverlay"
