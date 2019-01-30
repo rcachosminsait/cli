@@ -33,10 +33,15 @@ export default {
     font-kerning: none;
     .ods-scrollbar--main-content {
       height: $--main-content-height;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
       padding: 24px;
       box-sizing: border-box;
       padding: $--main-content-padding;
       background: $--color-neutral-4;
     }
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
   }
 </style>
