@@ -82,7 +82,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding-top: 9vh;
+      padding-top: 6vh;
     }
 
     /deep/ &__footer {
