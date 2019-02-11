@@ -2,7 +2,8 @@
   ods-form.login-form__form(
     :model="loginForm"
     :rules="rules"
-    ref="loginForm")
+    ref="loginForm"
+    :hide-required-asterisk="true")
     div
       h1.login-form__title \{{ $t('login.title') }}
       .login-form__errors.ods-mb-5

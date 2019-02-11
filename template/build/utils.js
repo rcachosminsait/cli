@@ -69,7 +69,7 @@ exports.cssLoaders = function (options) {
             path.resolve(__dirname,'../src/assets/scss/base/_variables.scss'),
             path.resolve(__dirname, '../node_modules/@onesait/onesait-ds/packages/theme-onesait/src/common/var.scss'),
             path.resolve(__dirname,'../src/assets/scss/base/_mixins.scss'),
-            path.resolve(__dirname,'../src/assets/scss/base/_typography_placeholder.scss')
+            path.resolve(__dirname,'../src/assets/scss/base/_typography-placeholder.scss')
           ]
         }
       }

@@ -2,7 +2,8 @@
   ods-form.login-form__form.login-form__form--password(
     :model='passwordForm'
     :rules='rules'
-    ref='passwordForm')
+    ref='passwordForm'
+    :hide-required-asterisk="true")
     template(v-if="emailSent===0")
       div
         h1.login-form__title \{{ $t('password.title') }}
