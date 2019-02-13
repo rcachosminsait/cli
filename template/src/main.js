@@ -29,6 +29,8 @@ if (process.env.NODE_ENV === 'development') {
   window.odsInfo = {
     'ods-version': ODS.version,
     'project': info.name,
-    'author': info.author
+    'author': info.author,
+    'componentList': Object.keys(ODS),
+    'componentObjectList': ODS
   }
 }
