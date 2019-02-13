@@ -47,6 +47,7 @@ export default {
 
 <style lang="scss">
   .ods-actions-menu--suites__ul {
+    padding: 8px;
     .suites__title {
       background-color: $--color-onesait-logo;
       color: $--color-white;
