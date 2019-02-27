@@ -89,11 +89,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .user-ul__languages {
-    /deep/ .ods-input__inner {
-      border-bottom: none;
-    }
-  }
-</style>

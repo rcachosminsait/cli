@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  h1.ods-mb-12 Users
+  h1.ods-mb-12 Users - Dynamic breadcrumbs example
   ods-button(@click="getRandomUser") Get random User
 </template>
 
