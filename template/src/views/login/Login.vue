@@ -92,7 +92,7 @@ export default {
     /deep/ .login__select--white {
       input {
         background-color: $--color-white;
-        border-bottom: none;
+        border: none;
       }
     }
   }

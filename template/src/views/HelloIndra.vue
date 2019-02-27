@@ -1,76 +1,7 @@
 <template lang="pug">
 div
+  h1.ods-mb-12 Home - Dummy content
   ods-row.flex-container.wrap(:gutter="20")
-    ods-col.ods-mb-4(
-      :xs="24"
-      :md="8")
-      ods-module
-        div.flex-container.space-between.align-center(slot="header")
-          span Module Title
-          ods-button(type="text")
-            | Link Button
-            ods-icon(name="arrow-right" size="16")
-        p Content of module
-    ods-col.ods-mb-4(
-      :xs="24"
-      :md="8")
-      ods-module
-        div.flex-container.space-between.align-center(slot="header")
-          span Module Title
-          ods-button(type="text")
-            | Link Button
-            ods-icon(name="arrow-right" size="16")
-        p Content of module
-    ods-col.ods-mb-4(
-      :xs="24"
-      :md="8")
-      ods-module
-        div.flex-container.space-between.align-center(slot="header")
-          span Module Title
-          ods-button(type="text")
-            | Link Button
-            ods-icon(name="arrow-right" size="16")
-        p Content of module
-  ods-row.flex-container.wrap.ods-mt-6(:gutter="20")
-    ods-col.ods-mb-4(
-      :xs="24"
-      :md="12")
-      ods-module
-        ods-table(
-          :data="tableData3"
-          height="250"
-          style="width: 100%")
-          ods-table-column(
-            prop="date"
-            label="Fecha"
-            width="180")
-          ods-table-column(
-            prop="name"
-            label="Nombre"
-            width="180")
-          ods-table-column(
-            prop="address"
-            label="Dirección")
-    ods-col.ods-mb-4(
-      :xs="24"
-      :md="12")
-      ods-module
-        ods-table(
-          :data="tableData3"
-          height="250"
-          style="width: 100%")
-          ods-table-column(
-            prop="date"
-            label="Fecha"
-            width="180")
-          ods-table-column(
-            prop="name"
-            label="Nombre"
-            width="180")
-          ods-table-column(
-            prop="address"
-            label="Dirección")
-  ods-row.flex-container.wrap.ods-mt-6(:gutter="20")
     ods-col.ods-mb-4(
       :xs="24"
       :md="8")
