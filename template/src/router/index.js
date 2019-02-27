@@ -5,8 +5,6 @@ import HelloIndra from '@/views/HelloIndra'
 import Login from '@/views/login/Login'
 import LoginForm from '@/components/login/LoginForm'
 import LoginPasswordForm from '@/components/login/LoginPasswordForm'
-import Dashboard from '@/views/Dashboard'
-import Tasks from '@/views/Tasks'
 import Users from '@/views/Users'
 import MyUser from '@/views/MyUser'
 import EditUser from '@/views/EditUser'
@@ -42,24 +40,6 @@ const route = new Router({
       component: HelloIndra,
       meta: {
         breadcrumbTextKey: 'home',
-        private: true
-      }
-    },
-    {
-      path: '/dashboard',
-      name: 'Dashboard',
-      component: Dashboard,
-      meta: {
-        breadcrumbTextKey: 'dashboard',
-        private: true
-      }
-    },
-    {
-      path: '/tasks',
-      name: 'Tasks',
-      component: Tasks,
-      meta: {
-        breadcrumbTextKey: 'tasks',
         private: true
       }
     },
@@ -119,11 +99,11 @@ const route = new Router({
         },
         {
           path: 'my-user',
-          name: 'My User',
           component: RouteView,
           meta: {
             breadcrumbTextKey: 'myUser'
           },
+          redirect: {name: 'My User'},
           children: [
             {
               path: '',
@@ -132,7 +112,7 @@ const route = new Router({
             },
             {
               path: 'edit',
-              name: 'Edit user',
+              name: 'Edit my user',
               component: EditUser
             }
           ]

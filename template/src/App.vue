@@ -41,7 +41,8 @@ export default {
     }
   }
   ::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
+    height: 0;
     background: transparent;
   }
 </style>
