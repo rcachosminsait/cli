@@ -1,6 +1,6 @@
 <template lang="pug">
   ods-main-header(
-    headerLogoText="housekeeping"
+    headerLogoText="product"
     logoUrl="/"
     breadcrumbSeparator=">"
     actionsMenuIcon="overflow-menu"
