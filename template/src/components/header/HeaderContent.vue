@@ -36,6 +36,7 @@ import UserMenu from '@/components/header/UserMenu'
 import SuitesMenu from '@/components/header/SuitesMenu'
 import HeaderCustomContent from '@/components/header/HeaderCustomContent'
 import HeaderNotifications from '@/components/header/HeaderNotifications'
+import HeaderTopBar from '@/components/header/HeaderTopBar'
 
 export default {
   name: 'HeaderContent',
@@ -44,7 +45,8 @@ export default {
     UserMenu,
     SuitesMenu,
     HeaderCustomContent,
-    HeaderNotifications
+    HeaderNotifications,
+    HeaderTopBar
   },
   computed: {
     env () {
