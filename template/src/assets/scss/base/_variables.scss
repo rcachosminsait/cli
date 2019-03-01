@@ -65,3 +65,7 @@ $--breakpoint-menu: $--md;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
+
+:export {
+  topBarBg: $--color-primary-light-9;
+}

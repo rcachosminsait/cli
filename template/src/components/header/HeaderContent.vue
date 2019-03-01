@@ -9,7 +9,7 @@
     :environment="env"
     :showActionsMenu="true"
     :showUserMenu="true"
-    topBarBackground="#e3ebf1"
+    :topBarBackground="cssVars.topBarBg"
     topBarClass="my-top-bar"
     :topBarBorder="false"
     :topBarClosable="true"
@@ -43,6 +43,7 @@ import SuitesMenu from '@/components/header/SuitesMenu'
 import HeaderCustomContent from '@/components/header/HeaderCustomContent'
 import HeaderNotifications from '@/components/header/HeaderNotifications'
 import HeaderTopBar from '@/components/header/HeaderTopBar'
+import cssVars from '@/assets/scss/base/_variables.scss'
 
 export default {
   name: 'HeaderContent',
@@ -54,6 +55,13 @@ export default {
     HeaderNotifications,
     HeaderTopBar
   },
+
+  data () {
+    return {
+      cssVars: cssVars
+    }
+  },
+
   computed: {
     env () {
       return process.env.ENV_TAG
