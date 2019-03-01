@@ -12,7 +12,9 @@
     topBarBackground="#e3ebf1"
     topBarClass="my-top-bar"
     :topBarBorder="false"
-    :topBarClosable="true")
+    :topBarClosable="true"
+    ref="header"
+    @closeTopBar="handleTopBar")
     template(slot="actions")
       header-actions
     template(slot="userAvatar")
@@ -56,6 +58,16 @@ export default {
     env () {
       return process.env.ENV_TAG
     }
+  },
+
+  methods: {
+    handleTopBar () {
+      this.$emit('hasTopBar', false)
+    }
+  },
+
+  mounted () {
+    if (this.$refs.header.$slots.topbar) this.$emit('hasTopBar', true)
   }
 }
 </script>
