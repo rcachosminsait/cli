@@ -31,15 +31,26 @@ $--color-onesait-logo: #193b47;
 
 /* Menu, Header & Main-V2-Jan-19
 --------------------------*/
+@function sum($items...){
+  $total: 0;
+  @each $item in $items {
+    $total: $total + $item;
+  }
+  @return $total
+};
+
 $--header-height: 64px;
+$--header-topbar: 48px;
 $--header-padding: 16px;
 $--header-mobile-padding: 8px;
 $--main-nav-width: 240px;
 $--main-nav-width-collapsed: 64px;
 $--collapse-bottom-margin: 8px;
 $--nav-collapse-bar-height: 52px;
-$--main-content-height: calc(100vh - #{$--header-height});
-$--nav-height: calc(100vh - #{$--header-height} - #{$--nav-collapse-bar-height} - #{$--collapse-bottom-margin});
+$--main-content-height: calc(100vh - #{sum($--header-height)});
+$--main-content-height--topbar: calc(100vh - #{sum($--header-height, $--header-topbar)});
+$--nav-height: calc(100vh - #{sum($--header-height, $--nav-collapse-bar-height, $--collapse-bottom-margin)});
+$--nav-height--topbar: calc(100vh - #{sum($--header-height, $--header-topbar, $--nav-collapse-bar-height, $--collapse-bottom-margin)});
 $--main-nav-shadow: 0 4px 10px 0 rgba( $--color-black, .1 );
 $--main-content-padding: 24px;
 
@@ -54,3 +65,7 @@ $--breakpoint-menu: $--md;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
+
+:export {
+  topBarBg: $--color-primary-light-9;
+}

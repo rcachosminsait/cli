@@ -44,3 +44,18 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .ods-main-nav {
+    /deep/ .no-scrolling-wrapper,
+    /deep/ .scrollbar__wrap {
+      height: $--nav-height;
+    }
+    &.has-top-bar {
+      /deep/ .no-scrolling-wrapper,
+      /deep/ .scrollbar__wrap {
+        height: $--nav-height--topbar;
+      }
+    }
+  }
+</style>

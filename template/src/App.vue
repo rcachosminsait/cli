@@ -1,11 +1,11 @@
 <template lang="pug">
   #app
     template(v-if="!this.$route.path.includes('login')")
-      header-content
+      header-content(@hasTopBar="handleHeigth")
       div.flex-container
         nav-content
         ods-main
-          ods-scrollbar(wrapClass="ods-scrollbar--main-content")
+          ods-scrollbar(:wrapClass="wrapClass")
             router-view
             footer
     template(v-else)
@@ -21,6 +21,20 @@ export default {
   components: {
     HeaderContent,
     NavContent
+  },
+
+  data () {
+    return {
+      wrapClass: ''
+    }
+  },
+
+  methods: {
+    handleHeigth (val) {
+      this.wrapClass = val
+        ? 'ods-scrollbar--main-content has-top-bar'
+        : 'ods-scrollbar--main-content'
+    }
   }
 }
 </script>
@@ -38,6 +52,9 @@ export default {
       box-sizing: border-box;
       padding: $--main-content-padding;
       background: $--color-neutral-4;
+      &.has-top-bar {
+        height: $--main-content-height--topbar;
+      }
     }
   }
   ::-webkit-scrollbar {

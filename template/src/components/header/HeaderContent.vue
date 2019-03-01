@@ -8,7 +8,13 @@
     :showBreadcrumbs="true"
     :environment="env"
     :showActionsMenu="true"
-    :showUserMenu="true")
+    :showUserMenu="true"
+    :topBarBackground="cssVars.topBarBg"
+    topBarClass="my-top-bar"
+    :topBarBorder="false"
+    :topBarClosable="true"
+    ref="header"
+    @closeTopBar="handleTopBar")
     template(slot="actions")
       header-actions
     template(slot="userAvatar")
@@ -26,6 +32,8 @@
       header-custom-content
     template(slot="notifications")
       header-notifications
+    template(slot="topbar")
+      header-top-bar
 </template>
 
 <script>
@@ -34,6 +42,8 @@ import UserMenu from '@/components/header/UserMenu'
 import SuitesMenu from '@/components/header/SuitesMenu'
 import HeaderCustomContent from '@/components/header/HeaderCustomContent'
 import HeaderNotifications from '@/components/header/HeaderNotifications'
+import HeaderTopBar from '@/components/header/HeaderTopBar'
+import cssVars from '@/assets/scss/base/_variables.scss'
 
 export default {
   name: 'HeaderContent',
@@ -42,12 +52,30 @@ export default {
     UserMenu,
     SuitesMenu,
     HeaderCustomContent,
-    HeaderNotifications
+    HeaderNotifications,
+    HeaderTopBar
   },
+
+  data () {
+    return {
+      cssVars: cssVars
+    }
+  },
+
   computed: {
     env () {
       return process.env.ENV_TAG
     }
+  },
+
+  methods: {
+    handleTopBar () {
+      this.$emit('hasTopBar', false)
+    }
+  },
+
+  mounted () {
+    if (this.$refs.header.$slots.topbar) this.$emit('hasTopBar', true)
   }
 }
 </script>
