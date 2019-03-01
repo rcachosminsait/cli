@@ -8,7 +8,11 @@
     :showBreadcrumbs="true"
     :environment="env"
     :showActionsMenu="true"
-    :showUserMenu="true")
+    :showUserMenu="true"
+    topBarBackground="#e3ebf1"
+    topBarClass="my-top-bar"
+    :topBarBorder="false"
+    :topBarClosable="true")
     template(slot="actions")
       header-actions
     template(slot="userAvatar")

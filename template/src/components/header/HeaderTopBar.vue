@@ -1,5 +1,5 @@
 <template lang="pug">
-  h1 Header top bar
+  small.tp-r-nano Header top bar
 </template>
 
 <script>
