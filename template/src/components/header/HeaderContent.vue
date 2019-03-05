@@ -33,7 +33,7 @@
       header-custom-content
     template(slot="notifications")
       header-notifications
-    template(slot="topbar")
+    //- template(slot="topbar")
       header-top-bar
 </template>
 
