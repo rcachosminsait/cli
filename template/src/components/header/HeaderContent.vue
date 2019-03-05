@@ -80,7 +80,7 @@ export default {
   },
 
   mounted () {
-    if (this.$refs.header.$slots.topbar) this.$emit('hasTopBar', true)
+    this.$emit('hasTopBar', this.$refs.header.$slots.topbar ? true : false)
   }
 }
 </script>
