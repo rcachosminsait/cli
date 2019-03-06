@@ -14,7 +14,8 @@
     :topBarBorder="false"
     :topBarClosable="true"
     ref="header"
-    @closeTopBar="handleTopBar")
+    @closeTopBar="handleTopBar"
+    @openTopBar="handleTopBar(true)")
     template(slot="actions")
       header-actions
     template(slot="userAvatar")
@@ -32,7 +33,7 @@
       header-custom-content
     template(slot="notifications")
       header-notifications
-    template(slot="topbar")
+    //- template(slot="topbar")
       header-top-bar
 </template>
 
@@ -69,13 +70,17 @@ export default {
   },
 
   methods: {
-    handleTopBar () {
-      this.$emit('hasTopBar', false)
-    }
+    handleTopBar (action) {
+      if (action) {
+        this.$emit('hasTopBar', true)
+      } else {
+        this.$emit('hasTopBar', false)
+      }
+    },
   },
 
   mounted () {
-    if (this.$refs.header.$slots.topbar) this.$emit('hasTopBar', true)
+    this.$emit('hasTopBar', this.$refs.header.$slots.topbar)
   }
 }
 </script>

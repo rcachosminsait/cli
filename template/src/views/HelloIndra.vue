@@ -1,5 +1,23 @@
 <template lang="pug">
 div
+  ods-sub-header(
+    :is-absolute="true"
+    :stretch="false"
+    cssClass="my-class")
+    ods-input.ods-mr-12(
+      size="deci"
+      class="m-b-10"
+      placeholder="Search"
+      v-model="input")
+      i(
+        slot="prefix"
+        class="ods-input__icon ods-icon-search")
+    ods-radio(
+      v-model="radio"
+      label="1") Option A
+    ods-radio(
+      v-model="radio"
+      label="2") Option B
   h1.ods-mb-12 Home - Dummy content
   ods-row.flex-container.wrap(:gutter="20")
     ods-col.ods-mb-4(
@@ -78,6 +96,8 @@ export default {
   name: 'Home',
   data () {
     return {
+      input: '',
+      radio: '',
       tableData3: [{
         date: '2016-05-03',
         name: 'Tom',
