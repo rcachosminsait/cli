@@ -14,6 +14,10 @@
     box-sizing: border-box;
     padding: rem(65) rem(65) rem(50);
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .05);
+    @media screen and (max-height:$--bp-desktop-sm-height) {
+      min-height: 445px;
+      padding: rem(40);
+    }
   }
 
   .login-form__title {
@@ -21,6 +25,9 @@
     font-size: rem(32);
     margin-bottom: rem(24);
     font-family: soho-light;
+    @media screen and (max-height:$--bp-desktop-sm-height) {
+      margin-bottom: rem(16);
+    }
   }
 
   .ods-form, .ods-input__inner {
@@ -79,9 +86,9 @@
       line-height: 1.75;
     }
   }
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: $--bp-mobile-lg) {
     .login-form__form {
-      padding: 20px;
+      padding: rem(20);
       min-height: initial;
       box-shadow: none;
       background: transparent;
@@ -94,12 +101,12 @@
       margin-top: rem(16);
     }
   }
-  @media screen and (max-width:321px) {
+  @media screen and (max-width:$--bp-mobile-sm) {
     /deep/ .ods-checkbox__label {
       font-size: rem(10);
     }
     .ods-button.is-round {
-      padding: 10px 20px;
+      padding: rem(10) rem(20);
     }
     .login-form__form {
       padding-top: 0;
