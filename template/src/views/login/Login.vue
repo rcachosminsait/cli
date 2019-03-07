@@ -88,6 +88,7 @@ export default {
       align-items: flex-start;
       padding-top: 6vh;
       @media screen and (max-height:$--bp-desktop-sm-height) {
+        min-height: calc(100vh - (#{$--header-height--sm} + #{$--footer-height}));
         padding-top: rem(24);
       }
     }

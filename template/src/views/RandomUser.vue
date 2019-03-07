@@ -11,7 +11,7 @@ export default {
     editRandomUser () {
       let num = this.generateId(0, 200)
       let str = Math.random().toString(36).substring(7)
-      sessionStorage.setItem('randomStr', `random Str ${str}`)
+      sessionStorage.setItem('randomStr', `#hash ${str}`)
       this.$router.push(`/users/random-user/${num}/edit/`)
     },
     generateId (min, max) {

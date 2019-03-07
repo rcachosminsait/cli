@@ -56,6 +56,7 @@ div
       :md="12")
       ods-module
         ods-table(
+          highlight-current-row
           :data="tableData3"
           height="250"
           style="width: 100%")
