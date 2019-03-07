@@ -16,6 +16,7 @@
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .05);
     @media screen and (max-height:$--bp-desktop-sm-height) {
       min-height: 445px;
+      width: 425px;
       padding: rem(40);
     }
   }
