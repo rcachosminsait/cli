@@ -53,6 +53,7 @@ export default {
 
 <style lang="scss" scoped>
   $--header-height: 125px;
+  $--header-height--sm: 80px;
   $--footer-height: 45px;
 
   .login {
@@ -71,6 +72,9 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media screen and (max-height:$--bp-desktop-sm-height) {
+        height: $--header-height--sm;
+      }
     }
 
     &__main {
@@ -83,6 +87,9 @@ export default {
       justify-content: center;
       align-items: flex-start;
       padding-top: 6vh;
+      @media screen and (max-height:$--bp-desktop-sm-height) {
+        padding-top: rem(24);
+      }
     }
 
     /deep/ &__footer {
@@ -117,7 +124,7 @@ export default {
 
   /* ipad landscape */
   @media only screen
-  and (min-device-width : 768px)
+  and (min-device-width : $--sm)
   and (max-device-width : 1024px)
   and (orientation : landscape) {
     .login {
@@ -126,7 +133,7 @@ export default {
       }
     }
   }
-  @media screen and (max-width:767px) {
+  @media screen and (max-width:$--bp-mobile-lg) {
     $--header-height: 75px;
     .login {
       background: $--color-white;
@@ -167,6 +174,17 @@ export default {
       padding-left: rem(5);
       border: 1px solid;
       border-radius: 20px;
+    }
+  }
+  @media screen and (max-height:$--bp-desktop-sm-height) {
+    .ods-logo {
+      width: 150px;
+      padding-top: rem(12);
+    }
+    /deep/ .ods-logo {
+    svg {
+        transform: scale(.8)!important;
+      }
     }
   }
   @media screen and (max-width:321px) {
