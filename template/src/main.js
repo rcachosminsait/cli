@@ -11,6 +11,8 @@ import i18n from './lang/i18n.js'
 import 'reset-css/reset.css'
 import '@/assets/scss/main.scss'
 import { truncate, formatDate } from './utils/filters'
+import { closest } from './utils/ie'
+closest()
 {{#if_eq onesait "yes"}}
 Vue.use(ODS)
 {{/if_eq}}

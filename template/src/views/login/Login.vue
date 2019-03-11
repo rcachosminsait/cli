@@ -180,7 +180,7 @@ export default {
   @media screen and (max-height:$--bp-desktop-sm-height) {
     .ods-logo {
       width: 150px;
-      padding-top: rem(12);
+      padding-top: rem(32);
     }
     /deep/ .ods-logo {
     svg {
