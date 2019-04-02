@@ -1,6 +1,10 @@
 const formatDate = (value, locale, options) => {
-  if (value) {
-    return value.toLocaleDateString(locale, options)
+  let date = value
+  if (date) {
+    if (!(date instanceof Date)) {
+      date = new Date(date)
+    }
+    return date.toLocaleDateString(locale, options)
   }
 }
 
