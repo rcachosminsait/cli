@@ -11,6 +11,9 @@ module.exports = {
     sourceMap: sourceMapEnabled,
     extract: isProduction
   }),
+  template: {
+    doctype: 'html'
+  },
   cssSourceMap: sourceMapEnabled,
   cacheBusting: config.dev.cacheBusting,
   transformToRequire: {
