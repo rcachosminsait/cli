@@ -11,7 +11,7 @@ $--grid-size: 8 !default; /* 8px */
 
 $cardinals-points: ( top , right , bottom , left );
 $space-type: ( padding , margin );
-$axes: ( x , y );
+$axes: ( y , x );
 
 // padding o margin general de num * gridSize convertido a rem con la teniendo en cuenta el tamaño de fuente del body 16px
 //   ejemplo gridSize = 8  
