@@ -51,6 +51,7 @@ export default {
       box-sizing: border-box;
       padding: $--main-content-padding;
       background: $--color-neutral-4;
+      scrollbar-width: none;
       &.has-top-bar {
         height: $--main-content-height--topbar;
       }
