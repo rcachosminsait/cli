@@ -45,6 +45,7 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-kerning: none;
+    scrollbar-width: none;
     .ods-scrollbar--main-content {
       height: $--main-content-height;
       -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -55,6 +56,9 @@ export default {
       &.has-top-bar {
         height: $--main-content-height--topbar;
       }
+    }
+    .ods-scrollbar__wrap {
+      scrollbar-width: none;
     }
   }
   ::-webkit-scrollbar {
