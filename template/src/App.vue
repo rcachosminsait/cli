@@ -45,15 +45,20 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-kerning: none;
+    scrollbar-width: none;
     .ods-scrollbar--main-content {
       height: $--main-content-height;
       -ms-overflow-style: -ms-autohiding-scrollbar;
       box-sizing: border-box;
       padding: $--main-content-padding;
       background: $--color-neutral-4;
+      scrollbar-width: none;
       &.has-top-bar {
         height: $--main-content-height--topbar;
       }
+    }
+    .ods-scrollbar__wrap {
+      scrollbar-width: none;
     }
   }
   ::-webkit-scrollbar {
