@@ -60,3 +60,13 @@ $axes: ( y , x );
     }
   }
 }
+
+// display helpers, add as many as you need
+$displays: (block, inline, inline-block, flex, none);
+
+// renders .ods-d-block, .ods-d-inline, .ods-d-none, etc
+@each $display in $displays {
+  .ods-d-#{$display} {
+    display: #{$display} !important;
+  }
+}
