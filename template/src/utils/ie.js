@@ -19,17 +19,17 @@ const closest = () => {
 
 // polyfill append IE11
 const append = (arr) => {
-  arr.forEach( item => {
+  arr.forEach(item => {
     if (item.hasOwnProperty('append')) return
     Object.defineProperty(item, 'append', {
       configurable: true,
       enumerable: true,
       writable: true,
-      value: function append() {
-        var argArr = Array.prototype.slice.call(arguments),
-          docFrag = document.createDocumentFragment()
-        argArr.forEach( argItem => {
-          var isNode = argItem instanceof Node
+      value: function append () {
+        const argArr = Array.prototype.slice.call(arguments)
+        const docFrag = document.createDocumentFragment()
+        argArr.forEach(argItem => {
+          const isNode = argItem instanceof Node
           docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)))
         })
         this.appendChild(docFrag)
@@ -41,7 +41,8 @@ const append = (arr) => {
 // polyfill string includes IE11
 const includes = () => {
   if (!String.prototype.includes) {
-    String.prototype.includes = function(search, start) {
+    // eslint-disable-next-line no-extend-native
+    String.prototype.includes = function (search, start) {
       'use strict'
       if (typeof start !== 'number') start = 0
       return start + search.length > this.length ? false : this.indexOf(search, start) !== -1
