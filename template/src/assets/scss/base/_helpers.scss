@@ -70,3 +70,12 @@ $displays: (block, inline, inline-block, flex, none);
     display: #{$display} !important;
   }
 }
+
+// align helpers
+$aligns: (left, right, center, justify);
+// renders .ods-text-left, .ods-text-center, etc
+@each $align in $aligns {
+  .ods-text-#{$align} {
+    text-align: #{$align} !important;
+  }
+}

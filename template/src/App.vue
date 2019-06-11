@@ -25,15 +25,13 @@ export default {
 
   data () {
     return {
-      wrapClass: ''
+      wrapClass: 'ods-scrollbar--main-content'
     }
   },
 
   methods: {
     handleHeigth (val) {
-      this.wrapClass = val
-        ? 'ods-scrollbar--main-content has-top-bar'
-        : 'ods-scrollbar--main-content'
+      this.wrapClass += ' has-top-bar'
     }
   }
 }
