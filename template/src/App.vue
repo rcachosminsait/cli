@@ -31,7 +31,7 @@ export default {
 
   methods: {
     handleHeigth (val) {
-      this.wrapClass += ' has-top-bar'
+      this.wrapClass = val ? 'ods-scrollbar--main-content has-top-bar' : 'ods-scrollbar--main-content'
     }
   }
 }
