@@ -20,7 +20,10 @@ export default {
     forgotPassword: 'Forgot your password?',
     keepMeLogged: 'Keep me logged in',
     login: 'Login',
-    footerLinks: ['faq', 'terms', 'conditions']
+    footerLinks: ['faq', 'terms', 'conditions'],
+    social: {
+      title: 'Login with'
+    }
   },
   password: {
     title: 'Reset password',
