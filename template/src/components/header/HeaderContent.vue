@@ -76,7 +76,7 @@ export default {
       } else {
         this.$emit('hasTopBar', false)
       }
-    },
+    }
   },
 
   mounted () {
