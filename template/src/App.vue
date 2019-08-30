@@ -25,15 +25,13 @@ export default {
 
   data () {
     return {
-      wrapClass: ''
+      wrapClass: 'ods-scrollbar--main-content'
     }
   },
 
   methods: {
     handleHeigth (val) {
-      this.wrapClass = val
-        ? 'ods-scrollbar--main-content has-top-bar'
-        : 'ods-scrollbar--main-content'
+      this.wrapClass = val ? 'ods-scrollbar--main-content has-top-bar' : 'ods-scrollbar--main-content'
     }
   }
 }
@@ -45,16 +43,19 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-kerning: none;
+    scrollbar-width: none;
     .ods-scrollbar--main-content {
       height: $--main-content-height;
       -ms-overflow-style: -ms-autohiding-scrollbar;
-      padding: 24px;
       box-sizing: border-box;
       padding: $--main-content-padding;
       background: $--color-neutral-4;
       &.has-top-bar {
         height: $--main-content-height--topbar;
       }
+    }
+    .ods-scrollbar__wrap {
+      scrollbar-width: none;
     }
   }
   ::-webkit-scrollbar {
