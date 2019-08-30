@@ -10,7 +10,7 @@ export default {
   methods: {
     getRandomUser () {
       let num = this.generateId(0, 200)
-      sessionStorage.setItem('userInfo', `#id ${num}`)
+      this.$router.refreshParam('userInfo', `#id ${num}`)
       this.$router.push(`/users/random-user/${num}`)
     },
     generateId (min, max) {

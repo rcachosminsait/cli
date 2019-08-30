@@ -11,7 +11,7 @@ import EditUser from '@/views/EditUser'
 import RandomUser from '@/views/RandomUser'
 import EditRandomUser from '@/views/EditRandomUser'
 import EditRandomUserConfirmation from '@/views/EditRandomUserConfirmation'
-import { setBreadcrumbParams } from './breadcrumb-params'
+import { setBreadcrumbParams, refreshParam } from './breadcrumb-params'
 Vue.use(Router)
 
 const route = new Router({
@@ -121,6 +121,9 @@ const route = new Router({
     }
   ]
 })
+
+// the parmams that refreshParam need are key and value that associate to the key. For example route.refreshParam('workingCenter', 'Horno')
+route.refreshParam = (...parameters) => refreshParam.apply(route, [route.app.$route.matched, ...parameters])
 
 route.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.private)) {
